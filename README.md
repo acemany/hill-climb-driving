@@ -1,4 +1,4 @@
-# Hill Climb Moddy
+# Hill Climb Driving
 
 ![Screenshot, driving on Countryside](./static/screenshots/1.png)
 ![Screenshot, Upgrading in Garage](./static/screenshots/2.png)
