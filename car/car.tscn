@@ -19,7 +19,7 @@ radius = 42.17
 
 [node name="Car" type="RigidBody2D"]
 collision_mask = 12
-mass = 8.0
+mass = 4.0
 physics_material_override = SubResource("PhysicsMaterial_voebe")
 center_of_mass_mode = 1
 center_of_mass = Vector2(-42, 41)
