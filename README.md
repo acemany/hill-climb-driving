@@ -23,3 +23,6 @@ This is a Hill Climb Racing Fanmade with **mod**ular upgrades and easy possibili
 
 - Sound Effects have been normalized
 - Credits are available ingame
+
+Portions of the materials used are trademarks and/or copyrighted works of Fingersoft Ltd. All rights reserved by Fingersoft. This material is not official and is not endorsed by Fingersoft.
+
