@@ -8,9 +8,9 @@ extends TextureButton
 
 func _ready() -> void:
 	assert(level_data != null)
-	
+
 	var highscore: float = Game.save.highscores.get_highscore(level_data)
-	
+
 	texture_normal = level_data.thumbnail
 	label_title.text = level_data.title
 	label_highscore.text = "%s m" % F.F(highscore)

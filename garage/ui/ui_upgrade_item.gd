@@ -14,7 +14,7 @@ func _ready() -> void:
 	texture_button.modulate = COLOR_EQUIPPED if item.is_equipped else Color.WHITE
 	texture_item.texture = item.definition.texture
 	update_label_level()
-	
+
 	item.equipped.connect(_on_item_equipped)
 	item.unequipped.connect(_on_item_unequipped)
 	item.level_changed.connect(_on_item_level_changed)

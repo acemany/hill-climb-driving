@@ -16,7 +16,7 @@ func get_value(meters: float) -> float:
 	var pos: float = fmod(meters / segment_length, 1.0)
 	var nth_segment: int = int(meters / segment_length)
 	var segment_index: int = get_segment_index_at(nth_segment)
-	
+
 	var sampled: float = segments[segment_index].sample(pos)
 	# make it so that 0.5 is the middle
 	sampled -= 0.5

@@ -7,7 +7,7 @@ var anim_blink: Animation
 
 func _ready() -> void:
 	anim_blink = animation_player.get_animation("blink")
-	
+
 	modulate.a = 0.0
 
 func activate() -> void:

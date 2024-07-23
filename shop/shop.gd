@@ -10,7 +10,7 @@ const ModalScene: PackedScene = preload("res://modal/shop_item_offer_buy_modal.t
 
 func _ready() -> void:
 	ui_shop_offer_refresh.offer = Game.save.shop.refresh_offer
-	
+
 	Game.save.shop.item_offer_pressed.connect(_on_shop_item_offer_pressed)
 	ui_shop_offer_refresh.bought.connect(_on_offer_refresh_bought)
 

@@ -8,7 +8,7 @@ static func format_thousands(n: float) -> String:
 		result = " %03d%s" % [(absi(integer) % 1000), result]
 		integer /= 1000
 	result = "%d%s" % [integer, result]
-	
+
 	return result
 
 static func F(n: float) -> String:

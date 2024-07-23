@@ -11,7 +11,7 @@ static func save_game() -> void:
 static func try_load_game() -> void:
 	if FileAccess.file_exists(SAVE_PATH):
 		var loaded: SaveGame = SafeResourceLoader.load(SAVE_PATH) as SaveGame
-		
+
 		if loaded != null:
 			Game.save.coins = loaded.coins
 			Game.save.gems = loaded.gems

@@ -15,7 +15,7 @@ var definition_engine: UpgradeItemDefinition = preload("res://item/upgrade/defin
 func initialize() -> void:
 	var free_engine: UpgradeItem = UpgradeItem.new(definition_engine)
 	add_item(free_engine)
-	
+
 	Game.save.experience.level_changed.connect(_on_game_experience_level_changed)
 
 func add_item(item: UpgradeItem) -> void:
@@ -50,18 +50,18 @@ func get_all_effects() -> CarStats:
 		UpgradeItemDefinition.StatType.CenterOfMassX: 0.0,
 		UpgradeItemDefinition.StatType.WheelDistance: 1.0,
 	}
-	
+
 	var equipped: Array[UpgradeItem] = get_equipped_items()
-	
+
 	for item: UpgradeItem in equipped:
 		var type: UpgradeItemDefinition.StatType = item.definition.stat
 		var operation: UpgradeItemDefinition.StatOperationType = item.definition.operation
-		
+
 		if !(type in result):
 			continue
-		
+
 		var effect: float = item.get_current_effect()
-		
+
 		match operation:
 			UpgradeItemDefinition.StatOperationType.Addition:
 				result[type] += effect
@@ -71,7 +71,7 @@ func get_all_effects() -> CarStats:
 				result[type] *= effect
 			UpgradeItemDefinition.StatOperationType.Division:
 				result[type] /= effect
-	
+
 	var stats: CarStats = CarStats.new()
 	stats._raw_engine_acceleration = result[UpgradeItemDefinition.StatType.EngineAcceleration]
 	stats._raw_air_rotation_speed = result[UpgradeItemDefinition.StatType.AirRotationSpeed]
@@ -84,7 +84,7 @@ func get_all_effects() -> CarStats:
 	stats.bounciness = result[UpgradeItemDefinition.StatType.Bounciness]
 	stats._raw_center_of_mass_x = result[UpgradeItemDefinition.StatType.CenterOfMassX]
 	stats.wheel_distance = result[UpgradeItemDefinition.StatType.WheelDistance]
-	
+
 	return stats
 
 func _on_game_experience_level_changed(_level: int) -> void:

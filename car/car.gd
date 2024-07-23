@@ -57,7 +57,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if touch_event != null:
 		var x_half: float = viewport_rect.position.x + viewport_rect.size.x / 2.0
 		var is_right: bool = touch_event.position.x > x_half
-		
+
 		if is_right:
 			touch_gas = touch_event.pressed
 		else:
@@ -65,16 +65,16 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(delta: float) -> void:
 	fuel -= delta / stats.fuel_capacity
-	
+
 	if !on_low_fuel and fuel < 0.2:
 		on_low_fuel = true
 		low_fuel_reached.emit()
-	
+
 	if !out_of_fuel and fuel <= 0.0:
 		out_of_fuel = true
 		fuel_depleted.emit()
 		respawn()
-	
+
 	highest_x = maxf(highest_x, position.x)
 
 func _physics_process(_delta: float) -> void:
@@ -82,16 +82,16 @@ func _physics_process(_delta: float) -> void:
 		touch_brake = true
 	elif Input.is_action_just_released("player_brake"):
 		touch_brake = false
-	
+
 	if Input.is_action_just_pressed("player_gas"):
 		touch_gas = true
 	elif Input.is_action_just_released("player_gas"):
 		touch_gas = false
-	
+
 	if can_drive():
 		var engine_acceleration: float = stats.engine_acceleration
 		var air_rotation_speed: float = stats.air_rotation_speed
-		
+
 		if touch_brake:
 			wheel_l.apply_torque(-engine_acceleration)
 			wheel_r.apply_torque(-engine_acceleration)
@@ -102,7 +102,7 @@ func _physics_process(_delta: float) -> void:
 			wheel_r.apply_torque(engine_acceleration)
 			if !is_on_ground():
 				apply_torque(-air_rotation_speed)
-	
+
 	apply_central_force(stats.downward_pressure)
 	apply_central_force(stats.rightward_pressure)
 

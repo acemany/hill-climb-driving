@@ -1,4 +1,4 @@
-class_name UpgradeItemDefinition 
+class_name UpgradeItemDefinition
 extends Resource
 
 enum StatType {

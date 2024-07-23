@@ -10,7 +10,7 @@ func _ready() -> void:
 	Game.save.garage.item_selected.connect(_on_garage_item_selected)
 	Game.save.garage.item_equipped_changed.connect(_on_garage_item_equipped_changed)
 	Game.save.garage.max_equips_changed.connect(_on_garage_max_equips_changed)
-	
+
 	update_equipped_text()
 
 func update_equipped_text() -> void:

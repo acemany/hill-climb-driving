@@ -25,19 +25,19 @@ var noise: FastNoiseLite = FastNoiseLite.new()
 
 func _ready() -> void:
 	noise.seed = 42
-	
+
 	polygon_2d.texture = fill_texture
 	line_2d_ground.texture = ground_texture
 	line_2d_ground.visible = ground_texture != null
-	
+
 	var vertices: PackedVector2Array = get_initial_vertices()
-	
+
 	for vertex: Vector2 in vertices:
 		# dont sync polygons over 100 times, just once at the end...
 		_add_point_nosync(vertex)
-	
+
 	update_base_vertices()
-	
+
 	# ...here
 	_sync()
 
@@ -57,7 +57,7 @@ func _sync() -> void:
 
 func add_point(pos: Vector2, index: int = -1) -> void:
 	_add_point_nosync(pos, index)
-	
+
 	_sync()
 
 func _update_collision_polygon(points_: PackedVector2Array) -> void:
@@ -75,26 +75,26 @@ func get_last_terrain_vertex() -> Vector2:
 func push_terrain_vertex() -> void:
 	var last_terrain_vertex: Vector2 = get_last_terrain_vertex()
 	var index_to_insert: int = points.size() - 2
-	
+
 	var x: float = last_terrain_vertex.x + VERTEX_GAP
 	var y: float = get_y(x)
-	
+
 	_add_point_nosync(Vector2(x, y), index_to_insert)
 	generated.emit(x)
 
 func pop_terrain_vertex() -> void:
 	var first_terrain_index: int = 1
-	
+
 	_remove_point_at_nosync(first_terrain_index)
 
 func update_base_vertices() -> void:
 	var first_terrain_vertex: Vector2 = get_first_terrain_vertex()
 	var last_terrain_vertex: Vector2 = get_last_terrain_vertex()
-	
+
 	points[0] = Vector2(first_terrain_vertex.x, points[0].y)
 	points[-2] = Vector2(last_terrain_vertex.x, points[-2].y)
 	points[-1] = Vector2(first_terrain_vertex.x, points[-1].y)
-	
+
 	generation_border.position = last_terrain_vertex
 	worldborder_l.position = first_terrain_vertex
 	collectible_destroyer.position = first_terrain_vertex
@@ -104,7 +104,7 @@ func get_initial_vertices() -> PackedVector2Array:
 	var count: int = 256
 	var x: float = -VERTEX_GAP * 96.0
 	var x_0: float = x
-	
+
 	var result: PackedVector2Array = PackedVector2Array()
 	result.append(Vector2(x, DEEP_Y))
 	for i: int in range(count):

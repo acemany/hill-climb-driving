@@ -7,12 +7,12 @@ extends YesNoModal
 
 func _ready() -> void:
 	super._ready()
-	
+
 	assert(offer != null)
-	
+
 	rich_text_label.text = "Do you want to buy this?
 [color=lime]%s[/color]: %s" % [offer.definition.title, offer.definition.description]
-	
+
 	button_yes.disabled = !offer.can_afford()
 
 

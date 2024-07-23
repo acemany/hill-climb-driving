@@ -7,7 +7,7 @@ var UIUpgradeItemScene: PackedScene = preload("res://garage/ui/ui_upgrade_item.t
 
 func _ready() -> void:
 	garage = Game.save.garage
-	
+
 	for item: UpgradeItem in garage.inventory:
 		add_item(item)
 

@@ -9,9 +9,9 @@ signal closed
 
 func _ready() -> void:
 	opened.emit()
-	
+
 	panel.pivot_offset = panel.size / 2.0
-	
+
 	animation_player.play("open")
 
 func close() -> void:

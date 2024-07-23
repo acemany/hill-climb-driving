@@ -13,18 +13,18 @@ var stream_buy: AudioStream = preload("res://global/sfx/buy.ogg")
 func _ready() -> void:
 	texture_rect_icon.texture = offer.definition.texture
 	label_price.text = F.F(offer.price)
-	
+
 	offer.bought.connect(_on_offer_bought)
 	offer.removed.connect(_on_offer_removed)
 
 
 func _on_offer_bought() -> void:
 	GlobalSound.play(stream_buy)
-	
+
 	var item: UpgradeItem = UpgradeItem.new(offer.definition)
 	Game.save.experience.xp += 500
 	Game.save.garage.add_item(item)
-	
+
 	Game.save.shop.refresh()
 
 

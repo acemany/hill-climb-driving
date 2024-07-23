@@ -8,7 +8,7 @@ signal item_bought(item: UpgradeItem)
 func _init(price_: int = 0, definition_: UpgradeItemDefinition = null) -> void:
 	super._init(price_)
 	definition = definition_
-	
+
 	bought.connect(_on_bought)
 
 func _on_bought() -> void:

@@ -10,7 +10,7 @@ const BASE_ZOOM_NO_UPGRADES: float = 0.55
 
 func _ready() -> void:
 	zoom = get_base_zoom()
-	
+
 	car.died.connect(_on_car_died)
 	car.fuel_depleted.connect(_on_car_died)
 	car.refueled.connect(_on_car_refueled)
@@ -28,7 +28,7 @@ func get_base_zoom() -> Vector2:
 
 func _on_car_died() -> void:
 	car_died = true
-	
+
 	zoom_tween = create_tween()
 	zoom_tween.tween_property(self, ^"zoom", get_base_zoom() * 1.2, 2) \
 		.set_ease(Tween.EASE_OUT) \
@@ -37,6 +37,6 @@ func _on_car_died() -> void:
 func _on_car_refueled(was_out_of: bool) -> void:
 	if was_out_of:
 		car_died = false
-		
+
 		if zoom_tween != null and zoom_tween.is_running():
 			zoom_tween.kill()

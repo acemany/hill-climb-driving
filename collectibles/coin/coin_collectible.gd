@@ -7,7 +7,7 @@ extends BaseCollectible
 
 func _ready() -> void:
 	super._ready()
-	
+
 	label_value.text = "%d" % value
 
 func _on_collected(_by: Car) -> void:

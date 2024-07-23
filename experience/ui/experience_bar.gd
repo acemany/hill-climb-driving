@@ -10,7 +10,7 @@ extends Control
 
 func _ready() -> void:
 	update_ui()
-	
+
 	experience.level_changed.connect(_on_experience_level_changed)
 	experience.xp_changed.connect(_on_experience_xp_changed)
 
@@ -23,6 +23,6 @@ func update_ui() -> void:
 
 func _on_experience_level_changed(_level: int) -> void:
 	update_ui()
-	
+
 func _on_experience_xp_changed(_xp: int) -> void:
 	update_ui()

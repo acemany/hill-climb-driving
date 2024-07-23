@@ -23,13 +23,13 @@ const stream_equip: AudioStream = preload("res://item/equip.ogg")
 
 func _ready() -> void:
 	update_ui()
-	
+
 	Game.save.coins_changed.connect(_on_save_coins_changed)
 
 func update_ui() -> void:
 	panel_visible.visible = item != null
 	center_container_empty.visible = item == null
-	
+
 	if item != null:
 		label_description.text = item.definition.description
 		texture_rect_icon.texture = item.definition.texture
@@ -79,13 +79,13 @@ func update_slider_tuning() -> void:
 func _set_item(new_item: UpgradeItem) -> void:
 	if item != null:
 		disconnect_item(item)
-	
+
 	item = new_item
 	connect_item(item)
-	
+
 	if not is_node_ready():
 		await ready
-	
+
 	update_ui()
 
 
