@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://caobgj8ei6ev8" path="res://global/art/trophy.png" id="2_lelew"]
 
 [node name="LevelButton" type="TextureButton"]
-custom_minimum_size = Vector2(640, 192)
+custom_minimum_size = Vector2(1136, 640)
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_default_cursor_shape = 2

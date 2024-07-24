@@ -2,12 +2,33 @@ class_name MainMenu
 extends Node2D
 
 var CreditsModalScene: PackedScene = preload("res://modal/credits_modal.tscn")
+var selected_level: int = 0:
+	set(a):
+		if a < 0 or a > 5:
+			return
+
+		var tween: Tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
+		tween.tween_property(levels_container, "position",
+							 Vector2(392 - a * 1352, levels_container.position.y), 1)
+
+		selected_level = a
 
 @onready var canvas_layer_ui: CanvasLayer = $CanvasLayerUI
 @onready var label_version: Label = $CanvasLayerUI/LabelVersion
+@onready var levels_container: CenterContainer = $CanvasLayerUI/CenterContainer
+
 
 func _ready() -> void:
 	label_version.text = "v%s" % ProjectSettings.get("application/config/version")
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		_on_button_quit_pressed()
+	elif event.is_action_pressed("ui_left"):
+		selected_level -= 1
+	elif event.is_action_pressed("ui_right"):
+		selected_level += 1
 
 
 func _on_button_quit_pressed() -> void:
@@ -30,3 +51,11 @@ func _on_button_source_code_pressed() -> void:
 func _on_button_credits_pressed() -> void:
 	var modal: CreditsModal = CreditsModalScene.instantiate() as CreditsModal
 	canvas_layer_ui.add_child(modal)
+
+
+func _on_level_select_r_pressed() -> void:
+	selected_level += 1
+
+
+func _on_level_select_l_pressed() -> void:
+	selected_level -= 1

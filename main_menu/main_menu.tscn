@@ -53,14 +53,15 @@ text = "v1.0"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 392.0
+offset_right = 6268.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VFlowContainer" parent="CanvasLayerUI/CenterContainer"]
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayerUI/CenterContainer"]
 custom_minimum_size = Vector2(0, 640)
 layout_mode = 2
-theme_override_constants/h_separation = 32
-theme_override_constants/v_separation = 32
+theme_override_constants/separation = 196
 
 [node name="LevelButton" parent="CanvasLayerUI/CenterContainer/VBoxContainer" instance=ExtResource("2_2p7lx")]
 layout_mode = 2
@@ -132,8 +133,34 @@ text = "Credits"
 layout_mode = 2
 text = "Source Code"
 
+[node name="LevelSelectR" type="Button" parent="CanvasLayerUI"]
+visibility_layer = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1722.0
+offset_top = 218.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelSelectL" type="Button" parent="CanvasLayerUI"]
+visibility_layer = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 218.0
+offset_right = -1722.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [connection signal="pressed" from="CanvasLayerUI/ButtonQuit" to="." method="_on_button_quit_pressed"]
 [connection signal="pressed" from="CanvasLayerUI/HBoxContainerL/ButtonGarage" to="." method="_on_button_garage_pressed"]
 [connection signal="pressed" from="CanvasLayerUI/HBoxContainerL/ButtonShop" to="." method="_on_button_shop_pressed"]
 [connection signal="pressed" from="CanvasLayerUI/HBoxContainerR/ButtonCredits" to="." method="_on_button_credits_pressed"]
 [connection signal="pressed" from="CanvasLayerUI/HBoxContainerR/ButtonSourceCode" to="." method="_on_button_source_code_pressed"]
+[connection signal="pressed" from="CanvasLayerUI/LevelSelectR" to="." method="_on_level_select_r_pressed"]
+[connection signal="pressed" from="CanvasLayerUI/LevelSelectL" to="." method="_on_level_select_l_pressed"]
