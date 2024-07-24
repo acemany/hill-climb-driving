@@ -54,6 +54,7 @@ func _ready() -> void:
 	highest_x = position.x
 	stats = garage.get_all_effects()
 	apply_car_stats()
+	set_joint_softness(20)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -101,13 +102,11 @@ func _physics_process(_delta: float) -> void:
 		if touch_brake:
 			wheel_l.apply_torque(-engine_acceleration)
 			wheel_r.apply_torque(-engine_acceleration)
-			if !is_on_ground():
-				apply_torque(air_rotation_speed)
+			apply_torque(air_rotation_speed)
 		elif touch_gas:
 			wheel_l.apply_torque(engine_acceleration)
 			wheel_r.apply_torque(engine_acceleration)
-			if !is_on_ground():
-				apply_torque(-air_rotation_speed)
+			apply_torque(-air_rotation_speed)
 
 	apply_central_force(stats.downward_pressure)
 	apply_central_force(stats.rightward_pressure)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0yg0e2kyk0ig"]
+[gd_scene load_steps=14 format=3 uid="uid://d0yg0e2kyk0ig"]
 
 [ext_resource type="Texture2D" uid="uid://c8nr83f3w15bk" path="res://car/car.png" id="1_nr2ec"]
 [ext_resource type="Script" path="res://car/car.gd" id="1_roxxv"]
@@ -12,14 +12,20 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_voebe"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kyqd8"]
-radius = 120.0
+radius = 60.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a2jj5"]
+radius = 77.69
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b5k6y"]
 radius = 42.17
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mswom"]
+size = Vector2(460, 150)
+
 [node name="Car" type="RigidBody2D"]
 collision_mask = 12
-mass = 4.0
+mass = 16.0
 physics_material_override = SubResource("PhysicsMaterial_voebe")
 center_of_mass_mode = 1
 center_of_mass = Vector2(-42, 41)
@@ -34,7 +40,7 @@ texture = ExtResource("2_t5wce")
 [node name="Wheels" type="Node2D" parent="."]
 
 [node name="PinJointL" type="PinJoint2D" parent="Wheels"]
-position = Vector2(-151, 91)
+position = Vector2(-151, 110)
 node_a = NodePath("../..")
 node_b = NodePath("WheelL")
 bias = 0.25
@@ -50,7 +56,7 @@ shape_override = SubResource("CircleShape2D_kyqd8")
 unique_name_in_owner = true
 
 [node name="PinJointR" type="PinJoint2D" parent="Wheels"]
-position = Vector2(109, 90)
+position = Vector2(109, 110)
 node_a = NodePath("../..")
 node_b = NodePath("WheelR")
 bias = 0.25
@@ -72,6 +78,9 @@ mass = 0.4
 max_contacts_reported = 1
 contact_monitor = true
 metadata/_edit_group_ = true
+
+[node name="CarCollectorArea" parent="Head" instance=ExtResource("6_xdhio")]
+shape_override = SubResource("CircleShape2D_a2jj5")
 
 [node name="HeadSprite" type="Sprite2D" parent="Head"]
 texture = ExtResource("3_uif0g")
@@ -102,8 +111,10 @@ polygon = PackedVector2Array(-189, -44, -168, 9, -139, 29, -82, 53, -20, 62, 63,
 wait_time = 5.0
 
 [node name="CarCollectorArea" parent="." node_paths=PackedStringArray("car") instance=ExtResource("6_xdhio")]
+position = Vector2(0, 26)
 collision_mask = 16
 car = NodePath("..")
+shape_override = SubResource("RectangleShape2D_mswom")
 
 [node name="CarEngineSoundPlayer" parent="." node_paths=PackedStringArray("car") instance=ExtResource("7_sal4j")]
 car = NodePath("..")
