@@ -8,33 +8,40 @@ signal item_equipped_changed(item: UpgradeItem, to: bool)
 
 signal max_equips_changed(max_equips: int)
 
+const DEFINITION_ENGINE: UpgradeItemDefinition = preload("res://item/upgrade/definitions/engine_acceleration.tres")
+
 @export var inventory: Array[UpgradeItem] = []
 
-var definition_engine: UpgradeItemDefinition = preload("res://item/upgrade/definitions/engine_acceleration.tres")
 
 func initialize() -> void:
-	var free_engine: UpgradeItem = UpgradeItem.new(definition_engine)
+	var free_engine: UpgradeItem = UpgradeItem.new(DEFINITION_ENGINE)
 	add_item(free_engine)
 
 	Game.save.experience.level_changed.connect(_on_game_experience_level_changed)
 
+
 func add_item(item: UpgradeItem) -> void:
 	inventory.append(item)
 	item_added.emit(item)
+
 
 func get_equipped_items() -> Array[UpgradeItem]:
 	return inventory.filter(func(item: UpgradeItem) -> bool:
 		return item.is_equipped
 	)
 
+
 func get_equipped_count() -> int:
 	return get_equipped_items().size()
+
 
 func get_item_count() -> int:
 	return inventory.size()
 
+
 func get_max_equips() -> int:
 	return 10 + Game.save.experience.current_level
+
 
 func get_all_effects() -> CarStats:
 	var result: Dictionary = {
@@ -86,6 +93,7 @@ func get_all_effects() -> CarStats:
 	stats.wheel_distance = result[UpgradeItemDefinition.StatType.WheelDistance]
 
 	return stats
+
 
 func _on_game_experience_level_changed(_level: int) -> void:
 	max_equips_changed.emit(get_max_equips())

@@ -1,6 +1,8 @@
 class_name UIShopUpgradeItemOffer
 extends Control
 
+const STREAM_BUY: AudioStream = preload("res://global/sfx/buy.ogg")
+
 @onready var offer: ShopUpgradeItemOffer
 
 @onready var label_price: Label = $HBoxPrice/LabelPrice
@@ -8,7 +10,6 @@ extends Control
 @onready var texture_button_buy: TextureButton = $TextureButtonBuy
 @onready var texture_rect_icon: TextureRect = $TextureRectIcon
 
-var stream_buy: AudioStream = preload("res://global/sfx/buy.ogg")
 
 func _ready() -> void:
 	texture_rect_icon.texture = offer.definition.texture
@@ -19,7 +20,7 @@ func _ready() -> void:
 
 
 func _on_offer_bought() -> void:
-	GlobalSound.play(stream_buy)
+	GlobalSound.play(STREAM_BUY)
 
 	var item: UpgradeItem = UpgradeItem.new(offer.definition)
 	Game.save.experience.xp += 500

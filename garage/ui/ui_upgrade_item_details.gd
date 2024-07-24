@@ -1,6 +1,9 @@
 class_name UIUpgradeItemDetails
 extends Control
 
+const STREAM_BUY: AudioStream = preload("res://global/sfx/buy.ogg")
+const STREAM_EQUIP: AudioStream = preload("res://item/equip.ogg")
+
 @export var item: UpgradeItem : set = _set_item
 
 @onready var label_title: Label = %LabelTitle
@@ -18,13 +21,12 @@ extends Control
 
 @onready var center_container_empty: CenterContainer = $CenterContainerEmpty
 
-const stream_buy: AudioStream = preload("res://global/sfx/buy.ogg")
-const stream_equip: AudioStream = preload("res://item/equip.ogg")
 
 func _ready() -> void:
 	update_ui()
 
 	Game.save.coins_changed.connect(_on_save_coins_changed)
+
 
 func update_ui() -> void:
 	panel_visible.visible = item != null
@@ -38,11 +40,13 @@ func update_ui() -> void:
 		update_upgrade_button()
 		update_slider_tuning()
 
+
 func connect_item(from_item: UpgradeItem) -> void:
 	from_item.equipped_changed.connect(_on_item_equipped_changed)
 	from_item.level_changed.connect(_on_item_level_changed)
 	from_item.tuned_level_changed.connect(_on_item_tuned_level_changed)
 	from_item.upgraded.connect(_on_item_upgraded)
+
 
 func disconnect_item(from_item: UpgradeItem) -> void:
 	from_item.equipped_changed.disconnect(_on_item_equipped_changed)
@@ -50,15 +54,18 @@ func disconnect_item(from_item: UpgradeItem) -> void:
 	from_item.tuned_level_changed.disconnect(_on_item_tuned_level_changed)
 	from_item.upgraded.disconnect(_on_item_upgraded)
 
+
 func update_title() -> void:
 	if item.is_tuned():
 		label_title.text = "%s\n+%d/%d/%d" % [item.definition.title, item.tuned_level, item.level, item.definition.max_level]
 	else:
 		label_title.text = "%s\n+%d/%d" % [item.definition.title, item.level, item.definition.max_level]
 
+
 func update_equip_button() -> void:
 	button_equip.disabled = !item.can_equip() and !item.is_equipped
 	button_equip.text = "Unequip" if item.is_equipped else "Equip"
+
 
 func update_upgrade_button() -> void:
 	if item.is_maxed():
@@ -68,6 +75,7 @@ func update_upgrade_button() -> void:
 		button_upgrade.disabled = !item.can_afford()
 		button_upgrade.text = F.F(item.get_current_price())
 
+
 func update_slider_tuning() -> void:
 	v_box_container_tuning.visible = item.level > 0
 	h_slider_tuning.max_value = item.level
@@ -75,6 +83,7 @@ func update_slider_tuning() -> void:
 		h_slider_tuning.value = item.level
 	else:
 		h_slider_tuning.value = item.tuned_level
+
 
 func _set_item(new_item: UpgradeItem) -> void:
 	if item != null:
@@ -113,11 +122,11 @@ func _on_item_tuned_level_changed(_to: int) -> void:
 func _on_item_equipped_changed(equipped: bool) -> void:
 	update_equip_button()
 	Game.save.garage.item_equipped_changed.emit(item, equipped)
-	GlobalSound.play(stream_equip)
+	GlobalSound.play(STREAM_EQUIP)
 
 
 func _on_item_upgraded() -> void:
-	GlobalSound.play(stream_buy)
+	GlobalSound.play(STREAM_BUY)
 
 
 func _on_save_coins_changed(_to: int) -> void:

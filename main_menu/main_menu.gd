@@ -1,7 +1,10 @@
 class_name MainMenu
 extends Node2D
 
-var CreditsModalScene: PackedScene = preload("res://modal/credits_modal.tscn")
+const GARAGE: PackedScene = preload("res://garage/garage.tscn")
+const SHOP: PackedScene = preload("res://shop/shop.tscn")
+const CREDITS: PackedScene = preload("res://modal/credits_modal.tscn")
+
 var selected_level: int = 0:
 	set(a):
 		if a < 0 or a > 5:
@@ -37,11 +40,11 @@ func _on_button_quit_pressed() -> void:
 
 
 func _on_button_garage_pressed() -> void:
-	get_tree().change_scene_to_file("res://garage/garage.tscn")
+	get_tree().change_scene_to_packed(GARAGE)
 
 
 func _on_button_shop_pressed() -> void:
-	get_tree().change_scene_to_file("res://shop/shop.tscn")
+	get_tree().change_scene_to_packed(SHOP)
 
 
 func _on_button_source_code_pressed() -> void:
@@ -49,7 +52,7 @@ func _on_button_source_code_pressed() -> void:
 
 
 func _on_button_credits_pressed() -> void:
-	var modal: CreditsModal = CreditsModalScene.instantiate() as CreditsModal
+	var modal: CreditsModal = CREDITS.instantiate() as CreditsModal
 	canvas_layer_ui.add_child(modal)
 
 

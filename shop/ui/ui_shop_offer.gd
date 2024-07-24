@@ -3,9 +3,10 @@ extends Button
 
 signal bought
 
+const STREAM_BUY: AudioStream = preload("res://global/sfx/buy.ogg")
+
 @export var offer: ShopOffer : set = _set_offer
 
-var stream_buy: AudioStream = preload("res://global/sfx/buy.ogg")
 
 func _set_offer(offer_: ShopOffer) -> void:
 	offer = offer_
@@ -17,9 +18,11 @@ func _set_offer(offer_: ShopOffer) -> void:
 
 	text = F.F(offer.price)
 
+
 func _on_pressed() -> void:
 	offer.try_buy()
 
+
 func _on_offer_bought() -> void:
-	GlobalSound.play(stream_buy)
+	GlobalSound.play(STREAM_BUY)
 	bought.emit()

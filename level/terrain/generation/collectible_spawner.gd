@@ -8,9 +8,9 @@ extends Node2D
 @onready var coins_container: Node2D = $Coins
 @onready var gems_container: Node2D = $Gems
 
-var FuelScene: PackedScene = preload("res://collectibles/fuel/fuel_collectible.tscn")
-var CoinScene: PackedScene = preload("res://collectibles/coin/coin_collectible.tscn")
-var GemScene: PackedScene = preload("res://collectibles/gem/gem_collectible.tscn")
+const FUEL_SCENE: PackedScene = preload("res://collectibles/fuel/fuel_collectible.tscn")
+const COIN_SCENE: PackedScene = preload("res://collectibles/coin/coin_collectible.tscn")
+const GEM_SCENE: PackedScene = preload("res://collectibles/gem/gem_collectible.tscn")
 
 var fuels_spawned: int = 0
 var coin_formations_spawned: int = 0
@@ -42,7 +42,7 @@ func spawn_collectible_at_x(packed_collectible: PackedScene, x: float) -> BaseCo
 	return spawn_collectible_at(packed_collectible, x, y)
 
 func spawn_fuel(x: float) -> void:
-	var fuel: FuelCollectible = spawn_collectible_at_x(FuelScene, x)
+	var fuel: FuelCollectible = spawn_collectible_at_x(FUEL_SCENE, x)
 
 	fuel_container.add_child.call_deferred(fuel)
 
@@ -82,7 +82,7 @@ func spawn_coins(x: float) -> void:
 			y = terrain.get_y(x + offset.x) - 192
 			cached_y.append(y)
 
-		var coin: CoinCollectible = spawn_collectible_at(CoinScene, x + offset.x, y) as CoinCollectible
+		var coin: CoinCollectible = spawn_collectible_at(COIN_SCENE, x + offset.x, y) as CoinCollectible
 		coin.position.y += offset.y
 		coin.value = value
 
@@ -123,7 +123,7 @@ func get_next_coins() -> float:
 	return parameters.get_coin_position_in_meters(coin_formations_spawned + 1) * Level.PX_TO_M
 
 func spawn_gems(x: float) -> void:
-	var gem: GemCollectible = spawn_collectible_at_x(GemScene, x) as GemCollectible
+	var gem: GemCollectible = spawn_collectible_at_x(GEM_SCENE, x) as GemCollectible
 
 	gems_container.add_child.call_deferred(gem)
 

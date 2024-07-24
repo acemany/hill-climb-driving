@@ -1,11 +1,13 @@
 class_name Pedal
 extends TextureRect
 
-var texture_off: Texture = preload("res://level/ui/pedal/pedal_off.png")
-var texture_on: Texture = preload("res://level/ui/pedal/pedal_on.png")
+const TEXTURE_OFF: Texture = preload("res://level/ui/pedal/pedal_off.png")
+const TEXTURE_ON: Texture = preload("res://level/ui/pedal/pedal_on.png")
+
 
 func activate() -> void:
-	texture = texture_on
+	texture = TEXTURE_ON
+
 
 func deactivate() -> void:
-	texture = texture_off
+	texture = TEXTURE_OFF

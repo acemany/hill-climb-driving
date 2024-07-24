@@ -1,15 +1,7 @@
 class_name LevelUI
 extends Control
 
-var PauseModalScene: PackedScene = preload("res://modal/pause_modal.tscn")
-
-@onready var label_distance: Label = $LabelDistance
-@onready var label_highscore: Label = $HBoxContainerHighscore/LabelHighscore
-@onready var fuel_bar: FuelBar = $VBoxContainer/HBoxContainer/FuelBar
-@onready var pedal_l: Pedal = $PedalL
-@onready var pedal_r: Pedal = $PedalR
-@onready var gauge_speed: Gauge = $GaugeSpeed
-@onready var low_fuel_alarm: LowFuelAlarm = $LowFuelAlarm
+const PAUSE_MODAL_SCENE: PackedScene = preload("res://modal/pause_modal.tscn")
 
 @export var level: Level
 @export var player: Car
@@ -20,6 +12,15 @@ var PauseModalScene: PackedScene = preload("res://modal/pause_modal.tscn")
 
 var highscore: float
 
+@onready var label_distance: Label = $LabelDistance
+@onready var label_highscore: Label = $HBoxContainerHighscore/LabelHighscore
+@onready var fuel_bar: FuelBar = $VBoxContainer/HBoxContainer/FuelBar
+@onready var pedal_l: Pedal = $PedalL
+@onready var pedal_r: Pedal = $PedalR
+@onready var gauge_speed: Gauge = $GaugeSpeed
+@onready var low_fuel_alarm: LowFuelAlarm = $LowFuelAlarm
+
+
 func _ready() -> void:
 	highscore = get_highscore()
 
@@ -28,6 +29,7 @@ func _ready() -> void:
 	player.low_fuel_reached.connect(_on_player_low_fuel_reached)
 	player.refueled.connect(_on_player_refueled)
 	player.fuel_depleted.connect(_on_player_fuel_depleted)
+
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
@@ -49,6 +51,7 @@ func _process(_delta: float) -> void:
 	gauge_speed.value = meters_per_second / 50.0
 	gauge_speed.text = "%.0f" % absf(meters_per_second)
 
+
 func get_distance_to_next_fuel_in_meters() -> float:
 	var closest_instance: FuelCollectible = collectible_spawner.get_closest_fuel(player.position.x)
 	var x: float
@@ -60,11 +63,13 @@ func get_distance_to_next_fuel_in_meters() -> float:
 
 	return (x - player.position.x) / Level.PX_TO_M
 
+
 func get_highscore() -> float:
 	return Game.save.highscores.get_highscore(level.data)
 
+
 func pause_game() -> void:
-	var modal: PauseModal = PauseModalScene.instantiate() as PauseModal
+	var modal: PauseModal = PAUSE_MODAL_SCENE.instantiate() as PauseModal
 	add_child(modal)
 
 
@@ -74,17 +79,21 @@ func _on_player_gas_changed(new_state: bool) -> void:
 	else:
 		pedal_r.deactivate()
 
+
 func _on_player_brake_changed(new_state: bool) -> void:
 	if new_state:
 		pedal_l.activate()
 	else:
 		pedal_l.deactivate()
 
+
 func _on_player_low_fuel_reached() -> void:
 	low_fuel_alarm.activate()
 
+
 func _on_player_fuel_depleted() -> void:
 	low_fuel_alarm.deactivate()
+
 
 func _on_player_refueled(_was_out_of: bool) -> void:
 	low_fuel_alarm.deactivate()
