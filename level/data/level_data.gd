@@ -1,7 +1,7 @@
 class_name LevelData
 extends Resource
 
-@export var id: String
+@export_enum("Countryside", "Desert", "Highway", "Mountain", "Cliff", "Nirvana") var id: int
 @export var title: String
 @export_multiline var description: String
 @export var thumbnail: Texture

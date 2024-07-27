@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_j3ee8")
-id = "cliff"
+id = 4
 title = "Cliff"
 description = "Keep your grip. Don't fall too much!"
 thumbnail = ExtResource("2_8xkj5")

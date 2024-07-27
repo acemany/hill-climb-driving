@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_uctxt")
-id = "highway"
+id = 2
 title = "Highway"
 description = "Easy to navigate, but Fuel becomes scarce."
 thumbnail = ExtResource("2_tpe5o")

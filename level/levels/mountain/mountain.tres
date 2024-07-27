@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_65p6k")
-id = "mountain"
+id = 3
 title = "Mountain"
 description = "It gets steeper and steeper."
 thumbnail = ExtResource("2_6wcoc")
