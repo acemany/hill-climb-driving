@@ -16,6 +16,11 @@ func _ready() -> void:
 	update_equipped_text()
 
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		_on_button_back_pressed()
+
+
 func update_equipped_text() -> void:
 	label_equip_count.text = "%d / %d" % [garage.get_equipped_count(), garage.get_max_equips()]
 

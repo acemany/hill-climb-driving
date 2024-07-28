@@ -8,15 +8,10 @@ signal item_equipped_changed(item: UpgradeItem, to: bool)
 
 signal max_equips_changed(max_equips: int)
 
-const DEFINITION_ENGINE: UpgradeItemDefinition = preload("res://item/upgrade/definitions/engine_acceleration.tres")
-
 @export var inventory: Array[UpgradeItem] = []
 
 
 func initialize() -> void:
-	var free_engine: UpgradeItem = UpgradeItem.new(DEFINITION_ENGINE)
-	add_item(free_engine)
-
 	Game.save.experience.level_changed.connect(_on_game_experience_level_changed)
 
 
