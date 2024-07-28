@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cf2ppoiab0kfm" path="res://global/art/square.png" id="2_07x0h"]
 [ext_resource type="Texture2D" uid="uid://t5ln8w5btsyp" path="res://global/art/square_pressed.png" id="3_uxl2e"]
 [ext_resource type="Texture2D" uid="uid://c83qkmuqh0lqa" path="res://global/art/square_hover.png" id="4_0jwst"]
-[ext_resource type="Texture2D" uid="uid://d33bpih7f0xo6" path="res://collectibles/gem/gem.png" id="5_epss6"]
+[ext_resource type="Texture2D" uid="uid://dkf2nishrqonu" path="res://collectibles/gem/gem.png" id="5_epss6"]
 
 [node name="UIShopUpgradeItemOffer" type="Control"]
 custom_minimum_size = Vector2(192, 192)

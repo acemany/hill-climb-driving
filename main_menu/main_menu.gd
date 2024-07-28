@@ -33,7 +33,6 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_pressed("ui_right"):
 		selected_level += 1
 
-
 func _on_button_quit_pressed() -> void:
 	Game.save_game()
 	get_tree().quit()

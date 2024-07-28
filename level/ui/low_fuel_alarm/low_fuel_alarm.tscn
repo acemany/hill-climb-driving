@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://level/ui/low_fuel_alarm/low_fuel_alarm.gd" id="1_4n0b8"]
 [ext_resource type="Texture2D" uid="uid://b4cdm457hi1oo" path="res://level/ui/low_fuel_alarm/alarm.png" id="1_krt7u"]
-[ext_resource type="AudioStream" uid="uid://c5d0ce8p3ba61" path="res://level/ui/low_fuel_alarm/beep.ogg" id="3_50e08"]
+[ext_resource type="AudioStream" uid="uid://lka6dxc40kg" path="res://assets/sfx/beep.ogg" id="3_50e08"]
 
 [sub_resource type="Animation" id="Animation_x6lbm"]
 length = 0.001

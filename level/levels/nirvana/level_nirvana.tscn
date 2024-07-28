@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://bpkwymyu8ict7" path="res://level/levels/nirvana/generation_nirvana.tres" id="2_hgu84"]
 [ext_resource type="Texture2D" uid="uid://dc5wg2rgjhj73" path="res://level/levels/nirvana/bg_nirvana.png" id="3_wc5fe"]
 [ext_resource type="Texture2D" uid="uid://diq6euwbo4fgb" path="res://level/levels/nirvana/black.png" id="5_mxmco"]
-[ext_resource type="AudioStream" uid="uid://lxk2rnpn7c4" path="res://level/levels/nirvana/nirvana_ambience.ogg" id="7_6aooo"]
+[ext_resource type="AudioStream" uid="uid://0e86kq4mdx44" path="res://assets/sfx/nirvana_ambience.ogg" id="7_6aooo"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_64s5w"]
 playback_mode = 2

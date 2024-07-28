@@ -1,8 +1,8 @@
 class_name UIUpgradeItemDetails
 extends Control
 
-const STREAM_BUY: AudioStream = preload("res://global/sfx/buy.ogg")
-const STREAM_EQUIP: AudioStream = preload("res://item/equip.ogg")
+const STREAM_BUY: AudioStream = preload("res://assets/sfx/buy.ogg")
+const STREAM_EQUIP: AudioStream = preload("res://assets/sfx/equip.ogg")
 
 @export var item: UpgradeItem : set = _set_item
 

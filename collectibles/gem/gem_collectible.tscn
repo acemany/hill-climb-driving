@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://boihtwln7qdax" path="res://collectibles/base_collectible.tscn" id="1_g4qo8"]
 [ext_resource type="Script" path="res://collectibles/gem/gem_collectible.gd" id="2_dxwsy"]
-[ext_resource type="Texture2D" uid="uid://d33bpih7f0xo6" path="res://collectibles/gem/gem.png" id="2_r4gqx"]
-[ext_resource type="AudioStream" uid="uid://m0g4b4bowuqf" path="res://collectibles/collect.ogg" id="3_ydmiq"]
+[ext_resource type="Texture2D" uid="uid://dkf2nishrqonu" path="res://collectibles/gem/gem.png" id="2_r4gqx"]
+[ext_resource type="AudioStream" uid="uid://dkpctw627l6w0" path="res://assets/sfx/collect.ogg" id="3_ydmiq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4sl1g"]
 radius = 90.0

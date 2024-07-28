@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://garage/ui/ui_upgrade_item_details.gd" id="1_uuxet"]
 [ext_resource type="Texture2D" uid="uid://dw6yef5x3qmjp" path="res://item/upgrade/icons/engine.png" id="2_08fls"]
 [ext_resource type="Texture2D" uid="uid://calp1hkrubq1i" path="res://collectibles/coin/coin.png" id="3_umkfk"]
-[ext_resource type="AudioStream" uid="uid://xno0l8xqm02v" path="res://global/sfx/buy.ogg" id="4_7rr8f"]
+[ext_resource type="AudioStream" uid="uid://ba7jps53m1elg" path="res://assets/sfx/buy.ogg" id="4_7rr8f"]
 
 [node name="UIUpgradeItemDetails" type="Control"]
 custom_minimum_size = Vector2(512, 0)

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://biuf1f3ains2y" path="res://car/head.png" id="3_uif0g"]
 [ext_resource type="PackedScene" uid="uid://btsnteqbw7vel" path="res://car/collector_area/car_collector_area.tscn" id="6_xdhio"]
 [ext_resource type="PackedScene" uid="uid://b7a2nej8wy0uu" path="res://car/sound/car_engine_sound_player.tscn" id="7_sal4j"]
-[ext_resource type="AudioStream" uid="uid://0e4jnsnb0q6o" path="res://car/break_neck.ogg" id="8_nqauj"]
+[ext_resource type="AudioStream" uid="uid://c54b1hrn8nsps" path="res://assets/sfx/break_neck.ogg" id="8_nqauj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_voebe"]
 

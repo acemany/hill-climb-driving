@@ -3,7 +3,7 @@ extends Button
 
 signal bought
 
-const STREAM_BUY: AudioStream = preload("res://global/sfx/buy.ogg")
+const STREAM_BUY: AudioStream = preload("res://assets/sfx/buy.ogg")
 
 @export var offer: ShopOffer : set = _set_offer
 

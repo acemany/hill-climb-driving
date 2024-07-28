@@ -1,7 +1,7 @@
 class_name UIShopUpgradeItemOffer
 extends Control
 
-const STREAM_BUY: AudioStream = preload("res://global/sfx/buy.ogg")
+const STREAM_BUY: AudioStream = preload("res://assets/sfx/buy.ogg")
 
 @onready var offer: ShopUpgradeItemOffer
 
