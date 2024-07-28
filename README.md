@@ -30,21 +30,3 @@ This is a Hill Climb Racing Fanmade with **mod**ular upgrades and easy possibili
 - Credits are available ingame
 
 Portions of the materials used are trademarks and/or copyrighted works of Fingersoft Ltd. All rights reserved by Fingersoft. This material is not official and is not endorsed by Fingersoft.
-
-SOUNDS
-
-Music:
-https://www.playonloop.com/2010-music-loops/lucky-cop
-https://www.playonloop.com/2011-music-loops/funk-break
-
-Menu click:
-http://www.freesound.org/people/NenadSimic/sounds/157539
-
-Camera sound:
-http://www.freesound.org/people/crk365/sounds/42862
-
-Bone cracking sound:
-http://freesound.org/people/VlatkoBlazek/sounds/189736
-
-Minibike idle sound:
-http://freesound.org/people/theTone/sounds/77945
