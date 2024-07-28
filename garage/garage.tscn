@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bfv7r6golysct" path="res://garage/ui/ui_upgrade_item_list.tscn" id="1_t42ah"]
 [ext_resource type="PackedScene" uid="uid://pt38kuekpumc" path="res://garage/ui/ui_upgrade_item_details.tscn" id="2_f58g0"]
 [ext_resource type="Texture2D" uid="uid://pokpvxsaa8n7" path="res://global/art/gradient_bg.tres" id="2_kxg6l"]
-[ext_resource type="Texture2D" uid="uid://1ksiyoq8fb1" path="res://global/art/bg_garage_overlay.png" id="3_0tvut"]
+[ext_resource type="Texture2D" uid="uid://1ksiyoq8fb1" path="res://assets/pics/bg_garage_overlay.png" id="3_0tvut"]
 [ext_resource type="PackedScene" uid="uid://i2yymnxjws64" path="res://global/ui/currency/currency_display_coins.tscn" id="4_8q34b"]
 [ext_resource type="PackedScene" uid="uid://dowgq8dkbcoej" path="res://experience/ui/experience_bar.tscn" id="7_ggphu"]
 

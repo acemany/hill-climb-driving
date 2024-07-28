@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://12pmsl2armet"]
 
 [ext_resource type="Script" path="res://garage/ui/ui_upgrade_item.gd" id="1_0ufmr"]
-[ext_resource type="Texture2D" uid="uid://cf2ppoiab0kfm" path="res://global/art/square.png" id="2_6rh4s"]
-[ext_resource type="Texture2D" uid="uid://t5ln8w5btsyp" path="res://global/art/square_pressed.png" id="3_77rjo"]
-[ext_resource type="Texture2D" uid="uid://c83qkmuqh0lqa" path="res://global/art/square_hover.png" id="4_a3yx7"]
+[ext_resource type="Texture2D" uid="uid://cf2ppoiab0kfm" path="res://assets/pics/square.png" id="2_6rh4s"]
+[ext_resource type="Texture2D" uid="uid://t5ln8w5btsyp" path="res://assets/pics/square_pressed.png" id="3_77rjo"]
+[ext_resource type="Texture2D" uid="uid://c83qkmuqh0lqa" path="res://assets/pics/square_hover.png" id="4_a3yx7"]
 
 [node name="UIUpgradeItem" type="Control"]
 custom_minimum_size = Vector2(192, 192)

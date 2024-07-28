@@ -4,8 +4,8 @@
 [ext_resource type="Resource" uid="uid://dwbqu8rmywvim" path="res://level/levels/nirvana/nirvana.tres" id="2_4ad4e"]
 [ext_resource type="Resource" uid="uid://mnry642k0puk" path="res://level/levels/nirvana/collectibles_nirvana.tres" id="2_8cl4d"]
 [ext_resource type="Resource" uid="uid://bpkwymyu8ict7" path="res://level/levels/nirvana/generation_nirvana.tres" id="2_hgu84"]
-[ext_resource type="Texture2D" uid="uid://dc5wg2rgjhj73" path="res://level/levels/nirvana/bg_nirvana.png" id="3_wc5fe"]
-[ext_resource type="Texture2D" uid="uid://diq6euwbo4fgb" path="res://level/levels/nirvana/black.png" id="5_mxmco"]
+[ext_resource type="Texture2D" uid="uid://bisf1for6a3kk" path="res://assets/pics/levels/bg_nirvana.png" id="3_wc5fe"]
+[ext_resource type="Texture2D" uid="uid://dr1p4ub2qks5e" path="res://assets/pics/levels/black.png" id="5_mxmco"]
 [ext_resource type="AudioStream" uid="uid://0e86kq4mdx44" path="res://assets/sfx/nirvana_ambience.ogg" id="7_6aooo"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_64s5w"]

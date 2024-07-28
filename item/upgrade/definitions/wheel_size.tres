@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://item/upgrade/formulae/upgrade_formula_polynomial.gd" id="1_8mm3g"]
 [ext_resource type="Script" path="res://item/upgrade/formulae/upgrade_formula_exponential.gd" id="2_tgdlm"]
 [ext_resource type="Script" path="res://item/upgrade/upgrade_item_definition.gd" id="3_1xrqa"]
-[ext_resource type="Texture2D" uid="uid://cv7w3av5qftqb" path="res://item/upgrade/icons/wheel_size.png" id="4_b1mbx"]
+[ext_resource type="Texture2D" uid="uid://xwhdxg4joxa5" path="res://assets/pics/items/wheel_size.png" id="4_b1mbx"]
 
 [sub_resource type="Resource" id="Resource_h7ir7"]
 script = ExtResource("1_8mm3g")

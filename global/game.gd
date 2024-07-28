@@ -52,16 +52,17 @@ static func save_game() -> void:
 			@warning_ignore("unsafe_call_argument")
 			file.store_var(item.get("definition").effect_formula.base < 0, true)
 
-		file.store_8(len(Game.save.shop.item_offers.filter(func(a: ShopUpgradeItemOffer) -> bool:
-				return a.price != 0 and a.get("definition").effect_formula != null)))# shop items
-		for offer: ShopUpgradeItemOffer in Game.save.shop.item_offers:
-			if offer.price == 0 or offer.get("definition").effect_formula == null:
-				continue
-			# i had to use the same kludge here
-			@warning_ignore("unsafe_call_argument")
-			file.store_8(offer.get("definition").stat)
-			@warning_ignore("unsafe_call_argument")
-			file.store_var(offer.get("definition").effect_formula.base < 0, true)
+		file.store_8(0)
+		# file.store_8(len(Game.save.shop.item_offers.filter(func(a: ShopUpgradeItemOffer) -> bool:
+		# 		return a.price != 0 and a.get("definition").effect_formula != null)))# shop items
+		# for offer: ShopUpgradeItemOffer in Game.save.shop.item_offers:
+		# 	if offer.price == 0 or offer.get("definition").effect_formula == null:
+		# 		continue
+		# 	# i had to use the same kludge here
+		# 	@warning_ignore("unsafe_call_argument")
+		# 	file.store_8(offer.get("definition").stat)
+		# 	@warning_ignore("unsafe_call_argument")
+		# 	file.store_var(offer.get("definition").effect_formula.base < 0, true)
 
 		file.store_double(Game.save.highscores.highscores[0])# Countryside
 		file.store_double(Game.save.highscores.highscores[1])# Desert
