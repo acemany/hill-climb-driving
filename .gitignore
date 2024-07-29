@@ -7,5 +7,7 @@
 *autosave.kra
 
 # Export
-export
-/addons/godot-scn-to-tscn-master
+export/
+
+# My script for converting/error check
+godot-scn-to-tscn/
