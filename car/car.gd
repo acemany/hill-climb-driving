@@ -87,7 +87,6 @@ func _process(delta: float) -> void:
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("player_brake"):
 		touch_brake = true
-		get_parent().get_parent().print_tree_pretty()
 	elif Input.is_action_just_released("player_brake"):
 		touch_brake = false
 
