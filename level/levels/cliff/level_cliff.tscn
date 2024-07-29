@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://oqypfweoqhtx"]
+[gd_scene load_steps=7 format=3]
 
-[ext_resource type="PackedScene" uid="uid://ba2rk50g3dcuh" path="res://level/level.tscn" id="1_d8wwd"]
-[ext_resource type="Resource" uid="uid://o7w1tux4cuew" path="res://level/levels/cliff/cliff.tres" id="2_iesbx"]
-[ext_resource type="Resource" uid="uid://bk0hrpyflx307" path="res://level/levels/cliff/generation_cliff.tres" id="2_murs5"]
-[ext_resource type="Texture2D" uid="uid://bktndrofbtmyi" path="res://assets/pics/levels/stone.png" id="3_ovrxb"]
-[ext_resource type="Texture2D" uid="uid://c4rkaosn2mhih" path="res://assets/pics/levels/rocks.png" id="4_ud3jq"]
-[ext_resource type="Resource" uid="uid://d2suyfj5p5kt6" path="res://level/levels/cliff/collectibles_cliff.tres" id="5_rl0da"]
+[ext_resource type="PackedScene" path="res://level/level.tscn" id="1_d8wwd"]
+[ext_resource type="Resource" path="res://level/levels/cliff/cliff.tres" id="2_iesbx"]
+[ext_resource type="Resource" path="res://level/levels/cliff/generation_cliff.tres" id="2_murs5"]
+[ext_resource type="Texture2D" path="res://assets/pics/levels/stone.png" id="3_ovrxb"]
+[ext_resource type="Texture2D" path="res://assets/pics/levels/rocks.png" id="4_ud3jq"]
+[ext_resource type="Resource" path="res://level/levels/cliff/collectibles_cliff.tres" id="5_rl0da"]
 
 [node name="LevelCliff" instance=ExtResource("1_d8wwd")]
 data = ExtResource("2_iesbx")

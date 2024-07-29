@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfv7r6golysct"]
+[gd_scene load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://garage/ui/ui_upgrade_item_list.gd" id="1_l13tf"]
 

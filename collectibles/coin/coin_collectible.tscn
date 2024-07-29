@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3s3i4461kvdh"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="PackedScene" uid="uid://boihtwln7qdax" path="res://collectibles/base_collectible.tscn" id="1_dms1f"]
+[ext_resource type="PackedScene" path="res://collectibles/base_collectible.tscn" id="1_dms1f"]
 [ext_resource type="Script" path="res://collectibles/coin/coin_collectible.gd" id="2_6ti8v"]
-[ext_resource type="Texture2D" uid="uid://calp1hkrubq1i" path="res://assets/pics/coin.png" id="2_avwns"]
-[ext_resource type="AudioStream" uid="uid://dkpctw627l6w0" path="res://assets/sfx/collect.ogg" id="3_0ppjf"]
+[ext_resource type="Texture2D" path="res://assets/pics/coin.png" id="2_avwns"]
+[ext_resource type="AudioStream" path="res://assets/sfx/collect.ogg" id="3_0ppjf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uoxrk"]
 radius = 90.0

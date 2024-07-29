@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cahox3uu8r2gb"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dn4t6rnuy7phe" path="res://assets/pics/gauge_base.png" id="1_2d4tf"]
-[ext_resource type="Texture2D" uid="uid://dgb1kbcuxp1j0" path="res://assets/pics/gauge_meter.png" id="2_nddgd"]
+[ext_resource type="Texture2D" path="res://assets/pics/gauge_base.png" id="1_2d4tf"]
+[ext_resource type="Texture2D" path="res://assets/pics/gauge_meter.png" id="2_nddgd"]
 [ext_resource type="Script" path="res://level/ui/gauge/gauge.gd" id="2_oger2"]
 
 [node name="Gauge" type="TextureRect"]

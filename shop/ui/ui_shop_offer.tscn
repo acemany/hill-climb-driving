@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://yw7ig7e0rsm8"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://shop/ui/ui_shop_offer.gd" id="1_yvce2"]
-[ext_resource type="AudioStream" uid="uid://ba7jps53m1elg" path="res://assets/sfx/buy.ogg" id="2_miv7a"]
+[ext_resource type="AudioStream" path="res://assets/sfx/buy.ogg" id="2_miv7a"]
 
 [node name="UIShopOffer" type="Button"]
 offset_right = 8.0

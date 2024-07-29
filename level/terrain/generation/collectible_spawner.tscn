@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1saa85rup74k"]
+[gd_scene load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://level/terrain/generation/collectible_spawner.gd" id="1_6lkok"]
 

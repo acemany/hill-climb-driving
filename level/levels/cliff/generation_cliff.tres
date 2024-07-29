@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="GenerationParameters" load_steps=13 format=3 uid="uid://bk0hrpyflx307"]
+[gd_resource type="Resource" load_steps=13 format=3]
 
 [ext_resource type="Script" path="res://level/terrain/generation/values/linear_value_generator.gd" id="1_1tx74"]
 [ext_resource type="Script" path="res://level/terrain/generation/values/noise_value_generator.gd" id="2_3wgun"]

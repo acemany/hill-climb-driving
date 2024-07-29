@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://djqqmkyh3uqm4"]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://modal/base_modal.gd" id="1_asy5c"]
 

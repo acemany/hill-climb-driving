@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcwuvhyl3kdtp"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://dkf2nishrqonu" path="res://assets/pics/gem.png" id="1_50ssr"]
+[ext_resource type="Texture2D" path="res://assets/pics/gem.png" id="1_50ssr"]
 [ext_resource type="Script" path="res://global/ui/currency/currency_display_gems.gd" id="1_531jg"]
 
 [node name="CurrencyDisplayGems" type="HBoxContainer"]

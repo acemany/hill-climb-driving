@@ -1,14 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://6op8q72t2oqc"]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Script" path="res://main_menu/main_menu.gd" id="1_6aqcu"]
-[ext_resource type="PackedScene" uid="uid://c2od0cvxcsuwc" path="res://main_menu/level_button.tscn" id="2_2p7lx"]
-[ext_resource type="Texture2D" uid="uid://pokpvxsaa8n7" path="res://global/art/gradient_bg.tres" id="2_poe60"]
-[ext_resource type="Resource" uid="uid://dahjty5g2s105" path="res://level/levels/countryside/countryside.tres" id="4_i7pdg"]
-[ext_resource type="Resource" uid="uid://cc1p24o5q42c" path="res://level/levels/desert/desert.tres" id="5_qolbk"]
-[ext_resource type="Resource" uid="uid://dipfucdc0flkj" path="res://level/levels/highway/highway.tres" id="6_p88uk"]
-[ext_resource type="Resource" uid="uid://ukan5ph3dl6e" path="res://level/levels/mountain/mountain.tres" id="7_po87c"]
-[ext_resource type="Resource" uid="uid://o7w1tux4cuew" path="res://level/levels/cliff/cliff.tres" id="8_fv12l"]
-[ext_resource type="Resource" uid="uid://dwbqu8rmywvim" path="res://level/levels/nirvana/nirvana.tres" id="9_8bd3y"]
+[ext_resource type="PackedScene" path="res://main_menu/level_button.tscn" id="2_2p7lx"]
+[ext_resource type="Texture2D" path="res://global/art/gradient_bg.tres" id="2_poe60"]
+[ext_resource type="Resource" path="res://level/levels/countryside/countryside.tres" id="4_i7pdg"]
+[ext_resource type="Resource" path="res://level/levels/desert/desert.tres" id="5_qolbk"]
+[ext_resource type="Resource" path="res://level/levels/highway/highway.tres" id="6_p88uk"]
+[ext_resource type="Resource" path="res://level/levels/mountain/mountain.tres" id="7_po87c"]
+[ext_resource type="Resource" path="res://level/levels/cliff/cliff.tres" id="8_fv12l"]
+[ext_resource type="Resource" path="res://level/levels/nirvana/nirvana.tres" id="9_8bd3y"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_6aqcu")

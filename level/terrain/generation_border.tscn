@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsxg6tkqlm2ro"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://level/terrain/generation_border.gd" id="1_tgcsf"]
 

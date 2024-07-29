@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8u5xsb41k60d"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="PackedScene" uid="uid://boihtwln7qdax" path="res://collectibles/base_collectible.tscn" id="1_g4qo8"]
+[ext_resource type="PackedScene" path="res://collectibles/base_collectible.tscn" id="1_g4qo8"]
 [ext_resource type="Script" path="res://collectibles/gem/gem_collectible.gd" id="2_dxwsy"]
-[ext_resource type="Texture2D" uid="uid://dkf2nishrqonu" path="res://assets/pics/gem.png" id="2_r4gqx"]
-[ext_resource type="AudioStream" uid="uid://dkpctw627l6w0" path="res://assets/sfx/collect.ogg" id="3_ydmiq"]
+[ext_resource type="Texture2D" path="res://assets/pics/gem.png" id="2_r4gqx"]
+[ext_resource type="AudioStream" path="res://assets/sfx/collect.ogg" id="3_ydmiq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4sl1g"]
 radius = 90.0

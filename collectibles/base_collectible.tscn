@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://boihtwln7qdax"]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://collectibles/base_collectible.gd" id="1_bcw6q"]
 
