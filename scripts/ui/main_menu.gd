@@ -1,9 +1,9 @@
 class_name MainMenu
 extends Node2D
 
-const GARAGE: PackedScene = preload("res://garage/garage.tscn")
-const SHOP: PackedScene = preload("res://shop/shop.tscn")
-const CREDITS: PackedScene = preload("res://modal/credits_modal.tscn")
+const GARAGE: PackedScene = preload("res://scenes/garage.tscn")
+const SHOP: PackedScene = preload("res://scenes/shop.tscn")
+const CREDITS: PackedScene = preload("res://scenes/ui/credits_modal.tscn")
 
 var selected_level: int = 0:
 	set(a):

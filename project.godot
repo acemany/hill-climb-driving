@@ -12,16 +12,16 @@ config_version=5
 
 config/name="Hill Climb Driving"
 config/description="One Car, many Possibilites."
-config/version="1.1"
-run/main_scene="res://main_menu/main_menu.tscn"
+config/version="1.2"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
-Global="*res://global/global.tscn"
-GlobalSound="*res://global/global_sound.tscn"
+Global="*res://scenes/global/global.tscn"
+GlobalSound="*res://scenes/global/global_sound.tscn"
 
 [debug]
 
@@ -48,14 +48,10 @@ enabled=PackedStringArray()
 [file_customization]
 
 folder_colors={
-"res://car/": "blue",
-"res://collectibles/": "red",
-"res://experience/": "yellow",
-"res://fonts/": "gray",
-"res://garage/": "yellow",
-"res://global/": "gray",
-"res://item/": "yellow",
-"res://level/": "green",
+"res://assets/": "purple",
+"res://godot-scn-to-tscn/": "purple",
+"res://resources/": "red",
+"res://scenes/": "green",
 "res://scripts/": "yellow"
 }
 
@@ -65,7 +61,7 @@ import/blender/enabled=false
 
 [gui]
 
-theme/custom="res://main_theme.tres"
+theme/custom="res://resources/main_theme.tres"
 
 [input]
 

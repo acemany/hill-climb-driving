@@ -1,7 +1,7 @@
 class_name UIShopUpgradeItemOfferList
 extends HFlowContainer
 
-const OFFER_SCENE: PackedScene = preload("res://shop/ui/ui_shop_upgrade_item_offer.tscn")
+const OFFER_SCENE: PackedScene = preload("res://scenes/ui/ui_shop_upgrade_item_offer.tscn")
 
 
 func _ready() -> void:

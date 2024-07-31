@@ -1,7 +1,7 @@
 class_name UIUpgradeItemList
 extends HFlowContainer
 
-const ITEM_UPGRADE_SCENE: PackedScene = preload("res://garage/ui/ui_upgrade_item.tscn")
+const ITEM_UPGRADE_SCENE: PackedScene = preload("res://scenes/ui/ui_upgrade_item.tscn")
 
 var garage: SaveGameGarage
 

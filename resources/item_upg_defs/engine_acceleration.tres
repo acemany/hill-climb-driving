@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="UpgradeItemDefinition" load_steps=7 format=3 uid="uid://cwgislg2veway"]
+
+[ext_resource type="Script" path="res://scripts/upgrade_formula_polynomial.gd" id="1_n51is"]
+[ext_resource type="Script" path="res://scripts/upgrade_formula_exponential.gd" id="2_wt0wf"]
+[ext_resource type="Script" path="res://scripts/upgrade_item_definition.gd" id="3_nqxul"]
+[ext_resource type="Texture2D" uid="uid://d2jh2hwloatmh" path="res://assets/pics/items/engine.png" id="4_1sl4l"]
+
+[sub_resource type="Resource" id="Resource_h7ir7"]
+script = ExtResource("1_n51is")
+base = 0.0
+multiplier = 0.2
+exponent = 1.0
+
+[sub_resource type="Resource" id="Resource_33c18"]
+script = ExtResource("2_wt0wf")
+base = 0.0
+multiplier = 1000.0
+exponent = 1.34
+
+[resource]
+script = ExtResource("3_nqxul")
+texture = ExtResource("4_1sl4l")
+title = "Engine"
+description = "Increase the Power of your Engine"
+stat = 0
+operation = 0
+price_formula = SubResource("Resource_33c18")
+effect_formula = SubResource("Resource_h7ir7")
+base_gem_price = 25
+max_level = 17

@@ -8,9 +8,9 @@ extends Node2D
 @onready var coins_container: Node2D = $Coins
 @onready var gems_container: Node2D = $Gems
 
-const FUEL_SCENE: PackedScene = preload("res://collectibles/fuel/fuel_collectible.tscn")
-const COIN_SCENE: PackedScene = preload("res://collectibles/coin/coin_collectible.tscn")
-const GEM_SCENE: PackedScene = preload("res://collectibles/gem/gem_collectible.tscn")
+const FUEL_SCENE: PackedScene = preload("res://scenes/collectibles/fuel.tscn")
+const COIN_SCENE: PackedScene = preload("res://scenes/collectibles/coin.tscn")
+const GEM_SCENE: PackedScene = preload("res://scenes/collectibles/gem.tscn")
 
 var fuels_spawned: int = 0
 var coin_formations_spawned: int = 0

@@ -7,22 +7,22 @@ signal item_offer_removed(offer: ShopUpgradeItemOffer)
 signal item_offer_pressed(offer: ShopUpgradeItemOffer)
 
 const DEFINITIONS_POOL_1: Array[UpgradeItemDefinition] = [
-	preload("res://item/upgrade/definitions/engine_acceleration.tres"),
-	preload("res://item/upgrade/definitions/wheel_size.tres"),
-	preload("res://item/upgrade/definitions/fuel_capacity.tres"),
-	preload("res://item/upgrade/definitions/bounciness.tres"),
-	preload("res://item/upgrade/definitions/downward_pressure.tres"),
-	preload("res://item/upgrade/definitions/air_rotation_speed.tres"),
+	preload("res://resources/item_upg_defs/engine_acceleration.tres"),
+	preload("res://resources/item_upg_defs/wheel_size.tres"),
+	preload("res://resources/item_upg_defs/fuel_capacity.tres"),
+	preload("res://resources/item_upg_defs/bounciness.tres"),
+	preload("res://resources/item_upg_defs/downward_pressure.tres"),
+	preload("res://resources/item_upg_defs/air_rotation_speed.tres"),
 ]
 
 const DEFINITIONS_POOL_2: Array[UpgradeItemDefinition] = [
-	preload("res://item/upgrade/definitions/binoculars_zoom.tres"),
-	preload("res://item/upgrade/definitions/stability.tres"),
-	preload("res://item/upgrade/definitions/wheel_distance.tres"),
-	preload("res://item/upgrade/definitions/inward_wheels.tres"),
-	preload("res://item/upgrade/definitions/center_of_mass_x.tres"),
-	preload("res://item/upgrade/definitions/center_of_mass_x_minus.tres"),
-	preload("res://item/upgrade/definitions/rightward_pressure.tres"),
+	preload("res://resources/item_upg_defs/binoculars_zoom.tres"),
+	preload("res://resources/item_upg_defs/stability.tres"),
+	preload("res://resources/item_upg_defs/wheel_distance.tres"),
+	preload("res://resources/item_upg_defs/inward_wheels.tres"),
+	preload("res://resources/item_upg_defs/center_of_mass_x.tres"),
+	preload("res://resources/item_upg_defs/center_of_mass_x_minus.tres"),
+	preload("res://resources/item_upg_defs/rightward_pressure.tres"),
 ]
 
 @export var item_offers: Array[ShopUpgradeItemOffer] = []

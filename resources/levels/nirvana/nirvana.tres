@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://ccti2jxlcaxtd"]
+
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="1_f6uhe"]
+[ext_resource type="Texture2D" uid="uid://dximwkv45mq7t" path="res://assets/pics/levels/thumb_nirvana.png" id="2_bo7dx"]
+
+[resource]
+script = ExtResource("1_f6uhe")
+id = 5
+title = "Nirvana"
+description = "???"
+thumbnail = ExtResource("2_bo7dx")
+scene_path = "res://resources/levels/nirvana/level_nirvana.tscn"

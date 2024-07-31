@@ -1,7 +1,7 @@
 class_name LevelUI
 extends Control
 
-const PAUSE_MODAL_SCENE: PackedScene = preload("res://modal/pause_modal.tscn")
+const PAUSE_MODAL_SCENE: PackedScene = preload("res://scenes/ui/pause_modal.tscn")
 
 @export var level: Level
 @export var player: Car

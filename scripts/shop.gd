@@ -1,6 +1,6 @@
 extends Node2D
 
-const MODAL_SCENE: PackedScene = preload("res://modal/shop_item_offer_buy_modal.tscn")
+const MODAL_SCENE: PackedScene = preload("res://scenes/ui/shop_item_offer_buy_modal.tscn")
 
 @onready var ui_shop_upgrade_item_offer_list: UIShopUpgradeItemOfferList = %UIShopUpgradeItemOfferList
 @onready var ui_shop_offer_refresh: UIShopOffer = $CanvasLayer/VBoxContainer/UIShopOfferRefresh
@@ -20,7 +20,7 @@ func _input(event: InputEvent) -> void:
 
 
 func _on_button_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 
 func _on_offer_refresh_bought() -> void:

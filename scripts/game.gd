@@ -3,7 +3,7 @@ extends Node
 
 const SAVE_PATH: String = "user://savegame.bin"
 
-const DEFINITION_ENGINE: UpgradeItemDefinition = preload("res://item/upgrade/definitions/engine_acceleration.tres")
+const DEFINITION_ENGINE: UpgradeItemDefinition = preload("res://resources/item_upg_defs/engine_acceleration.tres")
 
 static var save: SaveGame = SaveGame.new()
 

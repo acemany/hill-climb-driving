@@ -1,6 +1,6 @@
 extends Node2D
 
-const SHOP: PackedScene = preload("res://shop/shop.tscn")
+const SHOP: PackedScene = preload("res://scenes/shop.tscn")
 
 var garage: SaveGameGarage = Game.save.garage
 
@@ -26,7 +26,7 @@ func update_equipped_text() -> void:
 
 
 func _on_button_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 
 func _on_garage_item_selected(item: UpgradeItem) -> void:

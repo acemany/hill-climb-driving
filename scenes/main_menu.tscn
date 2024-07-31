@@ -1,0 +1,166 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_6aqcu"]
+[ext_resource type="PackedScene" path="res://scenes/ui/level_button.tscn" id="2_2p7lx"]
+[ext_resource type="Texture2D" path="res://scenes/global/art/gradient_bg.tres" id="2_poe60"]
+[ext_resource type="Resource" path="res://resources/levels/countryside/countryside.tres" id="4_i7pdg"]
+[ext_resource type="Resource" path="res://resources/levels/desert/desert.tres" id="5_qolbk"]
+[ext_resource type="Resource" path="res://resources/levels/highway/highway.tres" id="6_p88uk"]
+[ext_resource type="Resource" path="res://resources/levels/mountain/mountain.tres" id="7_po87c"]
+[ext_resource type="Resource" path="res://resources/levels/cliff/cliff.tres" id="8_fv12l"]
+[ext_resource type="Resource" path="res://resources/levels/nirvana/nirvana.tres" id="9_8bd3y"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_6aqcu")
+
+[node name="CanvasLayerBG" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayerBG"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_poe60")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CanvasLayerUI" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayerUI"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 87.0
+grow_horizontal = 2
+theme_type_variation = &"Label_L"
+text = "Hill Climb Driving"
+horizontal_alignment = 1
+
+[node name="LabelVersion" type="Label" parent="CanvasLayerUI"]
+modulate = Color(1, 1, 1, 0.25098)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -78.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 58.0
+grow_horizontal = 0
+text = "v1.0"
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayerUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 392.0
+offset_right = 6268.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayerUI/CenterContainer"]
+custom_minimum_size = Vector2(0, 640)
+layout_mode = 2
+theme_override_constants/separation = 196
+
+[node name="LevelButton" parent="CanvasLayerUI/CenterContainer/VBoxContainer" instance=ExtResource("2_2p7lx")]
+layout_mode = 2
+level_data = ExtResource("4_i7pdg")
+
+[node name="LevelButton3" parent="CanvasLayerUI/CenterContainer/VBoxContainer" instance=ExtResource("2_2p7lx")]
+layout_mode = 2
+level_data = ExtResource("5_qolbk")
+
+[node name="LevelButton2" parent="CanvasLayerUI/CenterContainer/VBoxContainer" instance=ExtResource("2_2p7lx")]
+layout_mode = 2
+level_data = ExtResource("6_p88uk")
+
+[node name="LevelButton4" parent="CanvasLayerUI/CenterContainer/VBoxContainer" instance=ExtResource("2_2p7lx")]
+layout_mode = 2
+level_data = ExtResource("7_po87c")
+
+[node name="LevelButton5" parent="CanvasLayerUI/CenterContainer/VBoxContainer" instance=ExtResource("2_2p7lx")]
+layout_mode = 2
+level_data = ExtResource("8_fv12l")
+
+[node name="LevelButton6" parent="CanvasLayerUI/CenterContainer/VBoxContainer" instance=ExtResource("2_2p7lx")]
+layout_mode = 2
+level_data = ExtResource("9_8bd3y")
+
+[node name="ButtonQuit" type="Button" parent="CanvasLayerUI"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 98.0
+offset_bottom = 82.0
+text = "Quit"
+
+[node name="HBoxContainerL" type="HBoxContainer" parent="CanvasLayerUI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = -16.0
+grow_vertical = 0
+
+[node name="ButtonGarage" type="Button" parent="CanvasLayerUI/HBoxContainerL"]
+layout_mode = 2
+text = "Garage"
+
+[node name="ButtonShop" type="Button" parent="CanvasLayerUI/HBoxContainerL"]
+layout_mode = 2
+text = "Shop"
+
+[node name="HBoxContainerR" type="HBoxContainer" parent="CanvasLayerUI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="ButtonCredits" type="Button" parent="CanvasLayerUI/HBoxContainerR"]
+layout_mode = 2
+text = "Credits"
+
+[node name="ButtonSourceCode" type="Button" parent="CanvasLayerUI/HBoxContainerR"]
+layout_mode = 2
+text = "Source Code"
+
+[node name="LevelSelectR" type="Button" parent="CanvasLayerUI"]
+visibility_layer = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1722.0
+offset_top = 218.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelSelectL" type="Button" parent="CanvasLayerUI"]
+visibility_layer = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 218.0
+offset_right = -1722.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="CanvasLayerUI/ButtonQuit" to="." method="_on_button_quit_pressed"]
+[connection signal="pressed" from="CanvasLayerUI/HBoxContainerL/ButtonGarage" to="." method="_on_button_garage_pressed"]
+[connection signal="pressed" from="CanvasLayerUI/HBoxContainerL/ButtonShop" to="." method="_on_button_shop_pressed"]
+[connection signal="pressed" from="CanvasLayerUI/HBoxContainerR/ButtonCredits" to="." method="_on_button_credits_pressed"]
+[connection signal="pressed" from="CanvasLayerUI/HBoxContainerR/ButtonSourceCode" to="." method="_on_button_source_code_pressed"]
+[connection signal="pressed" from="CanvasLayerUI/LevelSelectR" to="." method="_on_level_select_r_pressed"]
+[connection signal="pressed" from="CanvasLayerUI/LevelSelectL" to="." method="_on_level_select_l_pressed"]

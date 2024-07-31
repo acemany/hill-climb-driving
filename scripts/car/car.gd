@@ -10,7 +10,7 @@ signal refueled(was_out_of: bool)
 signal gas_changed(new_state: bool)
 signal brake_changed(new_state: bool)
 
-const MAIN_MENU_SCENE: PackedScene = preload("res://main_menu/main_menu.tscn")
+const MAIN_MENU_SCENE: PackedScene = preload("res://scenes/main_menu.tscn")
 
 var touch_gas: bool = false : set = _set_touch_gas
 var touch_brake: bool = false : set = _set_touch_brake
