@@ -56,7 +56,7 @@ folder_colors={
 "res://global/": "gray",
 "res://item/": "yellow",
 "res://level/": "green",
-"res://shop/": "yellow"
+"res://scripts/": "yellow"
 }
 
 [filesystem]

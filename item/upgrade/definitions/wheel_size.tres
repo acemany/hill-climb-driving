@@ -1,8 +1,8 @@
 [gd_resource type="Resource" load_steps=7 format=3]
 
-[ext_resource type="Script" path="res://item/upgrade/formulae/upgrade_formula_polynomial.gd" id="1_8mm3g"]
-[ext_resource type="Script" path="res://item/upgrade/formulae/upgrade_formula_exponential.gd" id="2_tgdlm"]
-[ext_resource type="Script" path="res://item/upgrade/upgrade_item_definition.gd" id="3_1xrqa"]
+[ext_resource type="Script" path="res://scripts/upgrade_formula_polynomial.gd" id="1_8mm3g"]
+[ext_resource type="Script" path="res://scripts/upgrade_formula_exponential.gd" id="2_tgdlm"]
+[ext_resource type="Script" path="res://scripts/upgrade_item_definition.gd" id="3_1xrqa"]
 [ext_resource type="Texture2D" path="res://assets/pics/items/wheel_size.png" id="4_b1mbx"]
 
 [sub_resource type="Resource" id="Resource_h7ir7"]

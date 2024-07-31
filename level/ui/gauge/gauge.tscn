@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" path="res://assets/pics/gauge_base.png" id="1_2d4tf"]
 [ext_resource type="Texture2D" path="res://assets/pics/gauge_meter.png" id="2_nddgd"]
-[ext_resource type="Script" path="res://level/ui/gauge/gauge.gd" id="2_oger2"]
+[ext_resource type="Script" path="res://scripts/gauge.gd" id="2_oger2"]
 
 [node name="Gauge" type="TextureRect"]
 offset_right = 320.0

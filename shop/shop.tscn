@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3]
 
-[ext_resource type="Script" path="res://shop/shop.gd" id="1_talen"]
+[ext_resource type="Script" path="res://scripts/shop.gd" id="1_talen"]
 [ext_resource type="Texture2D" path="res://global/art/gradient_bg.tres" id="2_f8j4k"]
 [ext_resource type="PackedScene" path="res://shop/ui/ui_shop_upgrade_item_offer_list.tscn" id="2_nqhl3"]
 [ext_resource type="Texture2D" path="res://assets/pics/bg_shop_overlay.png" id="3_0sxmb"]

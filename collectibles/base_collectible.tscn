@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://collectibles/base_collectible.gd" id="1_bcw6q"]
+[ext_resource type="Script" path="res://scripts/base_collectible.gd" id="1_bcw6q"]
 
 [sub_resource type="Animation" id="Animation_8yos3"]
 resource_name = "collect"

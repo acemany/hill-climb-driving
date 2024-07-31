@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3]
 
-[ext_resource type="Script" path="res://garage/garage.gd" id="1_18buo"]
+[ext_resource type="Script" path="res://scripts/garage.gd" id="1_18buo"]
 [ext_resource type="PackedScene" path="res://garage/ui/ui_upgrade_item_list.tscn" id="1_t42ah"]
 [ext_resource type="PackedScene" path="res://garage/ui/ui_upgrade_item_details.tscn" id="2_f58g0"]
 [ext_resource type="Texture2D" path="res://global/art/gradient_bg.tres" id="2_kxg6l"]

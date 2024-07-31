@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="PackedScene" path="res://modal/base_modal.tscn" id="1_eyydy"]
-[ext_resource type="Script" path="res://modal/pause_modal.gd" id="2_38h54"]
+[ext_resource type="Script" path="res://scripts/pause_modal.gd" id="2_38h54"]
 
 [node name="PauseModal" instance=ExtResource("1_eyydy")]
 process_mode = 3

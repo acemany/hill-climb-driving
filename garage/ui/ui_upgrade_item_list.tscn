@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://garage/ui/ui_upgrade_item_list.gd" id="1_l13tf"]
+[ext_resource type="Script" path="res://scripts/ui_upgrade_item_list.gd" id="1_l13tf"]
 
 [node name="UIUpgradeItemList" type="HFlowContainer"]
 offset_right = 40.0

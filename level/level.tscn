@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3]
 
 [ext_resource type="PackedScene" path="res://car/car.tscn" id="1_0gn4l"]
-[ext_resource type="Script" path="res://level/level.gd" id="1_3qiqg"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_3qiqg"]
 [ext_resource type="PackedScene" path="res://car/camera/car_camera.tscn" id="2_dbrbb"]
 [ext_resource type="PackedScene" path="res://level/terrain/simple_terrain.tscn" id="3_51l47"]
 [ext_resource type="PackedScene" path="res://level/ui/level_ui.tscn" id="3_nqxyq"]

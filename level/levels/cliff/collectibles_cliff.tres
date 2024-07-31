@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://level/terrain/generation/collectible_generation_parameters.gd" id="1_m0veb"]
+[ext_resource type="Script" path="res://scripts/collectible_generation_parameters.gd" id="1_m0veb"]
 
 [resource]
 script = ExtResource("1_m0veb")

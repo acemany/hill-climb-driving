@@ -1,10 +1,10 @@
 [gd_resource type="Resource" load_steps=13 format=3]
 
-[ext_resource type="Script" path="res://level/terrain/generation/values/linear_value_generator.gd" id="1_1tx74"]
-[ext_resource type="Script" path="res://level/terrain/generation/values/noise_value_generator.gd" id="2_3wgun"]
-[ext_resource type="Script" path="res://level/terrain/generation/generation_parameter.gd" id="3_nfxkq"]
-[ext_resource type="Script" path="res://level/terrain/generation/values/polynomial_value_generator.gd" id="4_vr3rl"]
-[ext_resource type="Script" path="res://level/terrain/generation/generation_parameters.gd" id="5_oyybl"]
+[ext_resource type="Script" path="res://scripts/linear_value_generator.gd" id="1_1tx74"]
+[ext_resource type="Script" path="res://scripts/noise_value_generator.gd" id="2_3wgun"]
+[ext_resource type="Script" path="res://scripts/generation_parameter.gd" id="3_nfxkq"]
+[ext_resource type="Script" path="res://scripts/polynomial_value_generator.gd" id="4_vr3rl"]
+[ext_resource type="Script" path="res://scripts/generation_parameters.gd" id="5_oyybl"]
 
 [sub_resource type="Resource" id="Resource_5m6iy"]
 script = ExtResource("1_1tx74")

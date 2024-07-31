@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://experience/ui/experience_bar.gd" id="1_lhnc8"]
+[ext_resource type="Script" path="res://scripts/experience_bar.gd" id="1_lhnc8"]
 [ext_resource type="Texture2D" path="res://assets/pics/level_background.png" id="2_lasr7"]
 
 [node name="ExperienceBar" type="Control"]

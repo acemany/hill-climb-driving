@@ -1,9 +1,9 @@
 [gd_resource type="Resource" load_steps=9 format=3]
 
-[ext_resource type="Script" path="res://level/terrain/generation/generation_parameter.gd" id="2_1djf0"]
-[ext_resource type="Script" path="res://level/terrain/generation/values/linear_value_generator.gd" id="2_6eltj"]
-[ext_resource type="Script" path="res://level/terrain/generation/values/noise_value_generator.gd" id="3_5pkb4"]
-[ext_resource type="Script" path="res://level/terrain/generation/generation_parameters.gd" id="3_6j784"]
+[ext_resource type="Script" path="res://scripts/generation_parameter.gd" id="2_1djf0"]
+[ext_resource type="Script" path="res://scripts/linear_value_generator.gd" id="2_6eltj"]
+[ext_resource type="Script" path="res://scripts/noise_value_generator.gd" id="3_5pkb4"]
+[ext_resource type="Script" path="res://scripts/generation_parameters.gd" id="3_6j784"]
 
 [sub_resource type="Resource" id="Resource_afk64"]
 script = ExtResource("2_6eltj")
