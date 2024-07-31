@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/level_button.gd" id="1_fkorm"]
+[ext_resource type="Texture2D" path="res://assets/pics/trophy.png" id="2_lelew"]
+
+[node name="LevelButton" type="TextureButton"]
+custom_minimum_size = Vector2(1136, 640)
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+stretch_mode = 6
+script = ExtResource("1_fkorm")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"PanelShadow"
+
+[node name="LabelTitle" type="Label" parent="."]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 97.0
+offset_bottom = 74.0
+text = "Title"
+
+[node name="HBoxContainerHighscore" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -149.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 58.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 16
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainerHighscore"]
+layout_mode = 2
+texture = ExtResource("2_lelew")
+expand_mode = 2
+
+[node name="LabelHighscore" type="Label" parent="HBoxContainerHighscore"]
+layout_mode = 2
+text = "0m"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

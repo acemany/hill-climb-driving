@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CollectibleGenerationParameters" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/generation/collectible_generation_parameters.gd" id="1_jjk2i"]
+
+[resource]
+script = ExtResource("1_jjk2i")
+fuel_distance_base = 135.0
+fuel_distance_delta = 12.0
+fuel_distance_exponent = 2.1
+fuel_distance_snap = 30.0
+coin_distance = 30.0
+coin_distance_offset = 5.0
+coin_formation_value_base = 10
+coin_formation_value_delta = 2
+gem_distance = 100.0
+gem_distance_offset = 10.0

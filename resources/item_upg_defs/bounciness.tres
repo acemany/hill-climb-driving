@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="UpgradeItemDefinition" load_steps=6 format=3 uid="uid://dygkuysn24ye"]
+
+[ext_resource type="Script" path="res://scripts/upgrade_formula_exponential.gd" id="1_8t4hv"]
+[ext_resource type="Script" path="res://scripts/upgrade_item_definition.gd" id="2_flbyp"]
+[ext_resource type="Texture2D" uid="uid://d22pp0uixp38v" path="res://assets/pics/items/bounciness.png" id="3_on5p7"]
+
+[sub_resource type="Resource" id="Resource_vq6sw"]
+script = ExtResource("1_8t4hv")
+base = 0.0
+multiplier = 1.1
+exponent = 1.08
+
+[sub_resource type="Resource" id="Resource_33c18"]
+script = ExtResource("1_8t4hv")
+base = 0.0
+multiplier = 800.0
+exponent = 1.35
+
+[resource]
+script = ExtResource("2_flbyp")
+texture = ExtResource("3_on5p7")
+title = "Springs"
+description = "Decrease the Bounciness"
+stat = 3
+operation = 3
+price_formula = SubResource("Resource_33c18")
+effect_formula = SubResource("Resource_vq6sw")
+base_gem_price = 25
+max_level = 15

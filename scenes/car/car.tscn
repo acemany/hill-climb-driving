@@ -1,0 +1,127 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/pics/car.png" id="1_nr2ec"]
+[ext_resource type="Script" path="res://scripts/car/car.gd" id="1_roxxv"]
+[ext_resource type="Texture2D" path="res://assets/pics/body.png" id="2_t5wce"]
+[ext_resource type="PackedScene" path="res://scenes/car/car_wheel.tscn" id="3_2q8ou"]
+[ext_resource type="Texture2D" path="res://assets/pics/head.png" id="3_uif0g"]
+[ext_resource type="PackedScene" path="res://scenes/car/car_collector_area.tscn" id="6_xdhio"]
+[ext_resource type="PackedScene" path="res://scenes/car/car_engine_sound_player.tscn" id="7_sal4j"]
+[ext_resource type="AudioStream" path="res://assets/sfx/break_neck.ogg" id="8_nqauj"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_voebe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kyqd8"]
+radius = 60.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a2jj5"]
+radius = 77.69
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b5k6y"]
+radius = 42.17
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mswom"]
+size = Vector2(460, 150)
+
+[node name="Car" type="RigidBody2D"]
+collision_mask = 12
+mass = 16.0
+physics_material_override = SubResource("PhysicsMaterial_voebe")
+center_of_mass_mode = 1
+center_of_mass = Vector2(-42, 41)
+angular_damp_mode = 1
+angular_damp = 1.5
+script = ExtResource("1_roxxv")
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(-51, -33)
+texture = ExtResource("2_t5wce")
+
+[node name="Wheels" type="Node2D" parent="."]
+
+[node name="PinJointL" type="PinJoint2D" parent="Wheels"]
+position = Vector2(-151, 110)
+node_a = NodePath("../..")
+node_b = NodePath("WheelL")
+bias = 0.25
+softness = 16.0
+metadata/_edit_group_ = true
+
+[node name="CarCollectorArea3" parent="Wheels/PinJointL" node_paths=PackedStringArray("car") instance=ExtResource("6_xdhio")]
+collision_mask = 16
+car = NodePath("../../..")
+shape_override = SubResource("CircleShape2D_kyqd8")
+
+[node name="WheelL" parent="Wheels/PinJointL" instance=ExtResource("3_2q8ou")]
+unique_name_in_owner = true
+
+[node name="PinJointR" type="PinJoint2D" parent="Wheels"]
+position = Vector2(109, 110)
+node_a = NodePath("../..")
+node_b = NodePath("WheelR")
+bias = 0.25
+softness = 16.0
+metadata/_edit_group_ = true
+
+[node name="CarCollectorArea2" parent="Wheels/PinJointR" node_paths=PackedStringArray("car") instance=ExtResource("6_xdhio")]
+collision_mask = 16
+car = NodePath("../../..")
+shape_override = SubResource("CircleShape2D_kyqd8")
+
+[node name="WheelR" parent="Wheels/PinJointR" instance=ExtResource("3_2q8ou")]
+unique_name_in_owner = true
+
+[node name="Head" type="RigidBody2D" parent="."]
+position = Vector2(-54, -100)
+collision_mask = 8
+mass = 0.4
+max_contacts_reported = 1
+contact_monitor = true
+metadata/_edit_group_ = true
+
+[node name="CarCollectorArea" parent="Head" instance=ExtResource("6_xdhio")]
+shape_override = SubResource("CircleShape2D_a2jj5")
+
+[node name="HeadSprite" type="Sprite2D" parent="Head"]
+texture = ExtResource("3_uif0g")
+
+[node name="PinJoint2DNeck" type="PinJoint2D" parent="Head"]
+position = Vector2(0, 56)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+softness = 2.0
+
+[node name="PinJoint2DHead" type="PinJoint2D" parent="Head"]
+position = Vector2(0, 31)
+node_a = NodePath("../..")
+node_b = NodePath("..")
+softness = 12.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head"]
+shape = SubResource("CircleShape2D_b5k6y")
+
+[node name="CarSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_nr2ec")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-17, 12)
+polygon = PackedVector2Array(-189, -44, -168, 9, -139, 29, -82, 53, -20, 62, 63, 51, 139, 30, 175, 9, 185, -11, 191, -26, -25, 2)
+
+[node name="TimerRespawn" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="CarCollectorArea" parent="." node_paths=PackedStringArray("car") instance=ExtResource("6_xdhio")]
+position = Vector2(0, 26)
+collision_mask = 16
+car = NodePath("..")
+shape_override = SubResource("RectangleShape2D_mswom")
+
+[node name="CarEngineSoundPlayer" parent="." node_paths=PackedStringArray("car") instance=ExtResource("7_sal4j")]
+car = NodePath("..")
+
+[node name="AudioStreamPlayerNeckBreak" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_nqauj")
+
+[connection signal="refueled" from="." to="." method="_on_refueled"]
+[connection signal="body_entered" from="Head" to="." method="_on_head_body_entered"]
+[connection signal="timeout" from="TimerRespawn" to="." method="_on_timer_respawn_timeout"]

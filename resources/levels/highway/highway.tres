@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://cxum4k0myo6i2"]
+
+[ext_resource type="Script" path="res://scripts/level_data.gd" id="1_uctxt"]
+[ext_resource type="Texture2D" uid="uid://fr64gpj8mxrq" path="res://assets/pics/levels/thumb_highway.png" id="2_tpe5o"]
+
+[resource]
+script = ExtResource("1_uctxt")
+id = 2
+title = "Highway"
+description = "Easy to navigate, but Fuel becomes scarce."
+thumbnail = ExtResource("2_tpe5o")
+scene_path = "res://resources/levels/highway/level_highway.tscn"
