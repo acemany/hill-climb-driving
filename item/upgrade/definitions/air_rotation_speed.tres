@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="UpgradeItemDefinition" load_steps=7 format=3 uid="uid://cib2ncoaofhyd"]
+[gd_resource type="Resource" script_class="UpgradeItemDefinition" load_steps=7 format=3 uid="uid://dy2r5ig4rhm2h"]
 
 [ext_resource type="Script" path="res://scripts/upgrade_formula_polynomial.gd" id="1_6ulwd"]
 [ext_resource type="Script" path="res://scripts/upgrade_formula_exponential.gd" id="2_wtidk"]

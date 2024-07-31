@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3]
 
-[ext_resource type="Script" path="res://scripts/low_fuel_alarm.gd" id="1_4n0b8"]
+[ext_resource type="Script" path="res://scripts/car/low_fuel_alarm.gd" id="1_4n0b8"]
 [ext_resource type="Texture2D" path="res://assets/pics/alarm.png" id="1_krt7u"]
 [ext_resource type="AudioStream" path="res://assets/sfx/beep.ogg" id="3_50e08"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="PackedScene" path="res://modal/base_action_modal.tscn" id="1_ctx5h"]
-[ext_resource type="Script" path="res://scripts/dismiss_modal.gd" id="2_b6dx3"]
+[ext_resource type="Script" path="res://scripts/ui/dismiss_modal.gd" id="2_b6dx3"]
 
 [node name="DismissModal" instance=ExtResource("1_ctx5h")]
 script = ExtResource("2_b6dx3")

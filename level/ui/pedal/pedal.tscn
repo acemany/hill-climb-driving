@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="Texture2D" path="res://assets/pics/pedal_off.png" id="1_ecs05"]
-[ext_resource type="Script" path="res://scripts/pedal.gd" id="2_idy8l"]
+[ext_resource type="Script" path="res://scripts/car/pedal.gd" id="2_idy8l"]
 
 [node name="Pedal" type="TextureRect"]
 anchors_preset = 2

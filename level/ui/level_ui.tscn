@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3]
 
-[ext_resource type="Script" path="res://scripts/level_ui.gd" id="1_3muol"]
+[ext_resource type="Script" path="res://scripts/ui/level_ui.gd" id="1_3muol"]
 [ext_resource type="Texture2D" path="res://assets/pics/fuel.png" id="2_wv2ak"]
 [ext_resource type="PackedScene" path="res://level/ui/pedal/pedal.tscn" id="3_anrv5"]
 [ext_resource type="PackedScene" path="res://level/ui/fuel_bar/fuel_bar.tscn" id="3_pna6q"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
 [ext_resource type="PackedScene" path="res://modal/base_action_modal.tscn" id="1_qnb0w"]
-[ext_resource type="Script" path="res://scripts/yes_no_modal.gd" id="2_lmblf"]
+[ext_resource type="Script" path="res://scripts/ui/yes_no_modal.gd" id="2_lmblf"]
 
 [node name="YesNoModal" instance=ExtResource("1_qnb0w")]
 script = ExtResource("2_lmblf")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_6aqcu"]
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_6aqcu"]
 [ext_resource type="PackedScene" path="res://main_menu/level_button.tscn" id="2_2p7lx"]
 [ext_resource type="Texture2D" path="res://global/art/gradient_bg.tres" id="2_poe60"]
 [ext_resource type="Resource" path="res://level/levels/countryside/countryside.tres" id="4_i7pdg"]

@@ -1,7 +1,7 @@
-[gd_resource type="Theme" load_steps=29 format=3 uid="uid://cv2p6ex6xgces"]
+[gd_resource type="Theme" load_steps=29 format=3 uid="uid://or48p4an5kqa"]
 
 [ext_resource type="Texture2D" uid="uid://2ek00d0fq8f" path="res://assets/pics/slider/grabber.png" id="1_jxqpi"]
-[ext_resource type="Texture2D" uid="uid://b6rkhrlh6h0y3" path="res://global/art/gradient_bg.tres" id="1_n2ras"]
+[ext_resource type="Texture2D" uid="uid://hji0vun1n4ci" path="res://global/art/gradient_bg.tres" id="1_n2ras"]
 [ext_resource type="Texture2D" uid="uid://dtk2giyothtgd" path="res://assets/pics/slider/grabber_disabled.png" id="2_gk5ae"]
 [ext_resource type="Texture2D" uid="uid://cqh12jpq6sgq1" path="res://assets/pics/slider/grabber_highlight.png" id="3_8qv4d"]
 [ext_resource type="FontFile" uid="uid://dm4kkh0ck2yex" path="res://assets/fonts/autumn_regular.ttf" id="5_0xyd0"]

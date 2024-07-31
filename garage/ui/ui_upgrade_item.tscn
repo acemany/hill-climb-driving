@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://scripts/ui_upgrade_item.gd" id="1_0ufmr"]
+[ext_resource type="Script" path="res://scripts/ui/ui_upgrade_item.gd" id="1_0ufmr"]
 [ext_resource type="Texture2D" path="res://assets/pics/square.png" id="2_6rh4s"]
 [ext_resource type="Texture2D" path="res://assets/pics/square_pressed.png" id="3_77rjo"]
 [ext_resource type="Texture2D" path="res://assets/pics/square_hover.png" id="4_a3yx7"]
