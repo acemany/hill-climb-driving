@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="UpgradeItemDefinition" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="UpgradeItemDefinition" load_steps=7 format=3 uid="uid://ca47ryh6hw0ik"]
 
 [ext_resource type="Script" path="res://scripts/upgrade_formula_polynomial.gd" id="1_tr0lq"]
 [ext_resource type="Script" path="res://scripts/upgrade_formula_exponential.gd" id="2_rg37c"]
 [ext_resource type="Script" path="res://scripts/upgrade_item_definition.gd" id="3_qikra"]
-[ext_resource type="Texture2D" path="res://assets/pics/items/stability.png" id="4_8idnf"]
+[ext_resource type="Texture2D" uid="uid://bx7wx554lbk35" path="res://assets/pics/items/stability.png" id="4_8idnf"]
 
 [sub_resource type="Resource" id="Resource_h7ir7"]
 script = ExtResource("1_tr0lq")
