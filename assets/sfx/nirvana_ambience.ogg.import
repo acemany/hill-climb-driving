@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/nirvana_ambience.ogg-0db26c93925a9a351093b8bb
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
