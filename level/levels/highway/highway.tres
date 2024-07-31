@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scripts/level_data.gd" id="1_uctxt"]
 [ext_resource type="Texture2D" path="res://assets/pics/levels/thumb_highway.png" id="2_tpe5o"]

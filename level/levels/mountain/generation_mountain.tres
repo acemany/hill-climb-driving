@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=13 format=3]
+[gd_resource type="Resource" script_class="GenerationParameters" load_steps=13 format=3]
 
 [ext_resource type="Script" path="res://scripts/linear_value_generator.gd" id="1_decnk"]
 [ext_resource type="Script" path="res://scripts/generation_parameters.gd" id="1_qdj03"]

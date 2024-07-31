@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="CollectibleGenerationParameters" load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://scripts/collectible_generation_parameters.gd" id="1_uaks7"]
 
