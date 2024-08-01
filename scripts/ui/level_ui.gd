@@ -47,7 +47,7 @@ func _process(_delta: float) -> void:
 
 	var next_fuel_m: float = get_distance_to_next_fuel_in_meters()
 	fuel_bar.value = player.fuel
-	fuel_bar.show_next_fuel = next_fuel_m > 0 and next_fuel_m <= 99 and !never_show_next_fuel
+	fuel_bar.show_next_fuel = next_fuel_m > 0 and next_fuel_m <= 100 and !never_show_next_fuel
 	fuel_bar.next_fuel_value = next_fuel_m
 
 	var meters_per_second: float = player.get_meters_per_second()

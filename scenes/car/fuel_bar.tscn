@@ -1,13 +1,17 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://crdy2035b233y"]
 
 [ext_resource type="Script" path="res://scripts/fuel_bar.gd" id="1_j0613"]
 
 [node name="FuelBar" type="ProgressBar"]
 custom_minimum_size = Vector2(256, 64)
+anchors_preset = -1
+anchor_right = 0.133333
+anchor_bottom = 0.0592593
 max_value = 1.0
 step = 0.0
 show_percentage = false
 script = ExtResource("1_j0613")
+metadata/_edit_use_anchors_ = true
 
 [node name="LabelNextFuel" type="Label" parent="."]
 layout_mode = 1
