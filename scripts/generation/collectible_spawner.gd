@@ -16,6 +16,7 @@ var fuels_spawned: int = 0
 var coin_formations_spawned: int = 0
 var gems_spawned: int = 0
 
+
 func _ready() -> void:
 	# pregenerate
 	while get_next_coins() / Level.PX_TO_M < 200:
@@ -26,20 +27,21 @@ func _ready() -> void:
 
 	terrain.generated.connect(_on_terrain_generated)
 
-# either manually define a y position for possible caching
 
+# either manually define y position for possible caching
 func spawn_collectible_at(packed_collectible: PackedScene, x: float, y: float) -> BaseCollectible:
 	var collectible: BaseCollectible = packed_collectible.instantiate() as BaseCollectible
 	collectible.position = Vector2(x, y)
 
 	return collectible
 
-# or let y be calculated
 
+# or let y be calculated
 func spawn_collectible_at_x(packed_collectible: PackedScene, x: float) -> BaseCollectible:
 	var y: float = terrain.get_y(x) - 192
 
 	return spawn_collectible_at(packed_collectible, x, y)
+
 
 func spawn_fuel(x: float) -> void:
 	var fuel: FuelCollectible = spawn_collectible_at_x(FUEL_SCENE, x)
@@ -48,8 +50,10 @@ func spawn_fuel(x: float) -> void:
 
 	fuels_spawned += 1
 
+
 func get_next_fuel() -> float:
 	return parameters.get_fuel_position_in_meters(fuels_spawned + 1) * Level.PX_TO_M
+
 
 func get_closest_fuel(from_x: float) -> FuelCollectible:
 	var children: Array[Node] = fuel_container.get_children()
@@ -62,6 +66,7 @@ func get_closest_fuel(from_x: float) -> FuelCollectible:
 	if filtered.size() == 0:
 		return null
 	return filtered[0]
+
 
 func spawn_coins(x: float) -> void:
 	var total_value: int = parameters.get_coins_value(coin_formations_spawned)
@@ -98,6 +103,7 @@ func spawn_coins(x: float) -> void:
 
 	coin_formations_spawned += 1
 
+
 func get_coin_values(total: int) -> Array[int]:
 	var result: Array[int] = []
 	var values: Array[int] = [250, 50, 10, 5, 1]
@@ -119,8 +125,10 @@ func get_coin_values(total: int) -> Array[int]:
 			break
 	return result
 
+
 func get_next_coins() -> float:
 	return parameters.get_coin_position_in_meters(coin_formations_spawned + 1) * Level.PX_TO_M
+
 
 func spawn_gems(x: float) -> void:
 	var gem: GemCollectible = spawn_collectible_at_x(GEM_SCENE, x) as GemCollectible
@@ -129,22 +137,22 @@ func spawn_gems(x: float) -> void:
 
 	gems_spawned += 1
 
+
 func get_next_gems() -> float:
 	return parameters.get_gem_position_in_meters(gems_spawned + 1) * Level.PX_TO_M
 
+
 func _on_terrain_generated(x_end: float) -> void:
 	var next_fuel: float = get_next_fuel()
+	var next_coins: float = get_next_coins()
+	var next_gems: float = get_next_gems()
 
 	if x_end >= next_fuel:
 		spawn_fuel(x_end)
 		next_fuel += 90 * Level.PX_TO_M
 
-	var next_coins: float = get_next_coins()
-
 	if x_end >= next_coins:
 		spawn_coins(x_end)
-
-	var next_gems: float = get_next_gems()
 
 	if x_end >= next_gems:
 		spawn_gems(x_end)

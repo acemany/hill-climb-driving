@@ -23,6 +23,7 @@ var points: PackedVector2Array = PackedVector2Array()
 
 var noise: FastNoiseLite = FastNoiseLite.new()
 
+
 func _ready() -> void:
 	noise.seed = 42
 
@@ -41,36 +42,45 @@ func _ready() -> void:
 	# ...here
 	_sync()
 
+
 func _add_point_nosync(pos: Vector2, index: int = -1) -> void:
 	if index == -1:
 		points.append(pos)
 	else:
 		points.insert(index, pos)
 
+
 func _remove_point_at_nosync(index: int = -1) -> void:
 	points.remove_at(index)
+
 
 func _sync() -> void:
 	line_2d_ground.points = points
 	polygon_2d.polygon = points
 	_update_collision_polygon.call_deferred(points)
 
+
 func add_point(pos: Vector2, index: int = -1) -> void:
 	_add_point_nosync(pos, index)
 
 	_sync()
 
+
 func _update_collision_polygon(points_: PackedVector2Array) -> void:
 	collision_polygon_2d.polygon = points_
+
 
 func get_y(for_x: float) -> float:
 	return generation_parameters.get_y(for_x)
 
+
 func get_first_terrain_vertex() -> Vector2:
 	return points[1]
 
+
 func get_last_terrain_vertex() -> Vector2:
 	return points[-3]
+
 
 func push_terrain_vertex() -> void:
 	var last_terrain_vertex: Vector2 = get_last_terrain_vertex()
@@ -82,10 +92,12 @@ func push_terrain_vertex() -> void:
 	_add_point_nosync(Vector2(x, y), index_to_insert)
 	generated.emit(x)
 
+
 func pop_terrain_vertex() -> void:
 	var first_terrain_index: int = 1
 
 	_remove_point_at_nosync(first_terrain_index)
+
 
 func update_base_vertices() -> void:
 	var first_terrain_vertex: Vector2 = get_first_terrain_vertex()
@@ -100,6 +112,7 @@ func update_base_vertices() -> void:
 	collectible_destroyer.position = first_terrain_vertex
 	worldborder_r.position = last_terrain_vertex
 
+
 func get_initial_vertices() -> PackedVector2Array:
 	var count: int = 256
 	var x: float = -VERTEX_GAP * 96.0
@@ -113,6 +126,7 @@ func get_initial_vertices() -> PackedVector2Array:
 	result.append(Vector2(x, DEEP_Y))
 	result.append(Vector2(x_0, DEEP_Y))
 	return result
+
 
 func _on_generation_border_car_entered() -> void:
 	# generate multiple vertices at once without syncing polygons
