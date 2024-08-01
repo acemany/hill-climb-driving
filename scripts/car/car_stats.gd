@@ -1,7 +1,7 @@
 class_name CarStats
 extends RefCounted
 
-const BASE_ACCELERATION: float = 100_000.0
+const BASE_ACCELERATION: float = 200_000.0
 const BASE_AIR_ROTATION_SPEED: float = 100_000.0
 const BASE_PRESSURE: float = 1_000.0
 const BASE_STABILITY: float = 1.5

@@ -54,7 +54,7 @@ func _ready() -> void:
 	highest_x = position.x
 	stats = garage.get_all_effects()
 	apply_car_stats()
-	set_joint_softness(20)
+	set_joint_softness(26)
 
 
 func _unhandled_input(event: InputEvent) -> void:

@@ -8,5 +8,6 @@ extends Area2D
 
 
 func _ready() -> void:
+	assert(car != null, "`car` value on CarCollectorArea cant be null")
 	if shape_override != null:
 		collision_shape_2d.shape = shape_override

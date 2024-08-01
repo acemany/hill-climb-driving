@@ -49,7 +49,6 @@ func _process(_delta: float) -> void:
 
 	var meters_per_second: float = player.get_meters_per_second()
 	gauge_speed.value = meters_per_second / 50.0
-	gauge_speed.text = "%.0f" % absf(meters_per_second)
 
 
 func get_distance_to_next_fuel_in_meters() -> float:

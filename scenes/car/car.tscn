@@ -1,13 +1,13 @@
-[gd_scene load_steps=14 format=3]
+[gd_scene load_steps=14 format=3 uid="uid://d34jm52dhdv5q"]
 
-[ext_resource type="Texture2D" path="res://assets/pics/car.png" id="1_nr2ec"]
+[ext_resource type="Texture2D" uid="uid://c5b6ienrmta6b" path="res://assets/pics/car.png" id="1_nr2ec"]
 [ext_resource type="Script" path="res://scripts/car/car.gd" id="1_roxxv"]
-[ext_resource type="Texture2D" path="res://assets/pics/body.png" id="2_t5wce"]
-[ext_resource type="PackedScene" path="res://scenes/car/car_wheel.tscn" id="3_2q8ou"]
-[ext_resource type="Texture2D" path="res://assets/pics/head.png" id="3_uif0g"]
+[ext_resource type="Texture2D" uid="uid://bf80wh0hmoba1" path="res://assets/pics/body.png" id="2_t5wce"]
+[ext_resource type="PackedScene" uid="uid://vsgl5r2brgo8" path="res://scenes/car/car_wheel.tscn" id="3_2q8ou"]
+[ext_resource type="Texture2D" uid="uid://0248lxipmv3i" path="res://assets/pics/head.png" id="3_uif0g"]
 [ext_resource type="PackedScene" path="res://scenes/car/car_collector_area.tscn" id="6_xdhio"]
 [ext_resource type="PackedScene" path="res://scenes/car/car_engine_sound_player.tscn" id="7_sal4j"]
-[ext_resource type="AudioStream" path="res://assets/sfx/break_neck.ogg" id="8_nqauj"]
+[ext_resource type="AudioStream" uid="uid://c54b1hrn8nsps" path="res://assets/sfx/break_neck.ogg" id="8_nqauj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_voebe"]
 
@@ -79,7 +79,8 @@ max_contacts_reported = 1
 contact_monitor = true
 metadata/_edit_group_ = true
 
-[node name="CarCollectorArea" parent="Head" instance=ExtResource("6_xdhio")]
+[node name="CarCollectorArea" parent="Head" node_paths=PackedStringArray("car") instance=ExtResource("6_xdhio")]
+car = NodePath("../..")
 shape_override = SubResource("CircleShape2D_a2jj5")
 
 [node name="HeadSprite" type="Sprite2D" parent="Head"]
