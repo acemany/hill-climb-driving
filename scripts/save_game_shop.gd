@@ -68,5 +68,5 @@ func remove_item_offer(offer: ShopUpgradeItemOffer) -> void:
 func refresh() -> void:
 	while item_offers.size() > 0:
 		remove_item_offer(item_offers[0])
-	assert(item_offers.size() == 0)
+	assert(item_offers.size() == 0, "How, what and why")
 	generate_item_offers()

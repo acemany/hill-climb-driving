@@ -5,9 +5,11 @@ extends BaseValueGenerator
 @export var min_value: float = -1.0
 @export var max_value: float = 1.0
 
+
 func _ready() -> void:
 	super._ready()
-	assert(period > 0.0)
+	assert(period > 0.0, "sine period can't be negative or zero")
+
 
 func get_value(meters: float) -> float:
 	var x: float = TAU * meters / period

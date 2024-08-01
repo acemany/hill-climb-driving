@@ -19,6 +19,7 @@ var highscore: float
 @onready var pedal_r: Pedal = $PedalR
 @onready var gauge_speed: Gauge = $GaugeSpeed
 @onready var low_fuel_alarm: LowFuelAlarm = $LowFuelAlarm
+@onready var level_map: Control = $LevelMap/Control
 
 
 func _ready() -> void:
@@ -38,6 +39,8 @@ func _process(_delta: float) -> void:
 	var meters: float = player.highest_x / Level.PX_TO_M
 	meters = maxf(0, meters)
 	label_distance.text = "%s m" % F.F(meters)
+	level_map.position.x = -fposmod(meters-120, 202) 
+
 
 	var highscore_displayed: float = maxf(meters, highscore)
 	label_highscore.text = "%s m" % F.F(highscore_displayed)

@@ -8,7 +8,7 @@ extends TextureButton
 
 
 func _ready() -> void:
-	assert(level_data != null)
+	assert(level_data != null, "can't make button linked to nothing")
 
 	var highscore: float = Game.save.highscores.get_highscore(level_data)
 

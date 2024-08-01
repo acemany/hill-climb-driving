@@ -1,15 +1,15 @@
-[gd_scene load_steps=11 format=3]
+[gd_scene load_steps=11 format=3 uid="uid://csl6ng7jbhgj5"]
 
 [ext_resource type="Script" path="res://scripts/ui/level_ui.gd" id="1_3muol"]
-[ext_resource type="Texture2D" path="res://assets/pics/fuel.png" id="2_wv2ak"]
+[ext_resource type="Texture2D" uid="uid://d2gwthba8y1qt" path="res://assets/pics/fuel.png" id="2_wv2ak"]
 [ext_resource type="PackedScene" path="res://scenes/car/pedal.tscn" id="3_anrv5"]
 [ext_resource type="PackedScene" path="res://scenes/car/fuel_bar.tscn" id="3_pna6q"]
 [ext_resource type="PackedScene" path="res://scenes/global/ui/currency/currency_display_coins.tscn" id="4_s7owg"]
 [ext_resource type="PackedScene" path="res://scenes/global/ui/currency/currency_display_gems.tscn" id="5_entv7"]
-[ext_resource type="PackedScene" path="res://scenes/car/gauge.tscn" id="5_fl8er"]
+[ext_resource type="PackedScene" uid="uid://6cnvfo51upry" path="res://scenes/car/gauge.tscn" id="5_fl8er"]
 [ext_resource type="PackedScene" path="res://scenes/car/low_fuel_alarm.tscn" id="6_75jpt"]
-[ext_resource type="Texture2D" path="res://assets/pics/trophy.png" id="9_bmjdt"]
-[ext_resource type="Texture2D" path="res://assets/pics/pause.png" id="10_gb3my"]
+[ext_resource type="Texture2D" uid="uid://b3ei23yviul05" path="res://assets/pics/trophy.png" id="9_bmjdt"]
+[ext_resource type="Texture2D" uid="uid://2ojkr2xoel1l" path="res://assets/pics/pause.png" id="10_gb3my"]
 
 [node name="LevelUI" type="Control"]
 layout_mode = 3
@@ -21,19 +21,90 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_3muol")
 
+[node name="LevelMap" type="Panel" parent="."]
+self_modulate = Color(0, 0, 0, 0)
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.289583
+anchor_right = 0.710417
+anchor_bottom = 0.00925926
+grow_horizontal = 2
+
+[node name="Control" type="Control" parent="LevelMap"]
+clip_contents = true
+layout_direction = 2
+layout_mode = 1
+anchor_right = 1.25
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="LevelMap/Control"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+anchor_right = 0.19802
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="LevelMap/Control"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+anchor_left = 0.2
+anchor_right = 0.39802
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel3" type="Panel" parent="LevelMap/Control"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+anchor_left = 0.4
+anchor_right = 0.59802
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel4" type="Panel" parent="LevelMap/Control"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+anchor_left = 0.6
+anchor_right = 0.79802
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel5" type="Panel" parent="LevelMap/Control"]
+custom_minimum_size = Vector2(200, 10)
+layout_mode = 2
+anchor_left = 0.8
+anchor_right = 0.99802
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
 [node name="LabelDistance" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -176.0
-offset_top = 16.0
-offset_right = 176.0
-offset_bottom = 103.0
-grow_horizontal = 2
+anchors_preset = -1
+anchor_left = 0.323958
+anchor_top = 0.0148148
+anchor_right = 0.38125
+anchor_bottom = 0.0953704
 theme_type_variation = &"Label_L"
 text = "0 m"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelDistanceArrow" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342187
+anchor_top = 0.00462963
+anchor_right = 0.360938
+anchor_bottom = 0.0314815
+theme_override_font_sizes/font_size = 24
+text = "▴"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0

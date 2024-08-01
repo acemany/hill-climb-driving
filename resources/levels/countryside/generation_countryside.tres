@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="GenerationParameters" load_steps=9 format=3]
+[gd_resource type="Resource" script_class="GenerationParameters" load_steps=9 format=3 uid="uid://clw1qlfh00b3b"]
 
 [ext_resource type="Script" path="res://scripts/generation/polynomial_value_generator.gd" id="1_6n3le"]
 [ext_resource type="Script" path="res://scripts/generation/generation_parameter.gd" id="2_uryk1"]

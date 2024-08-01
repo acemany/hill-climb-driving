@@ -6,8 +6,9 @@ extends Node2D
 
 static var PX_TO_M: float = 100.0
 
+
 func _ready() -> void:
-	assert(data != null)
+	assert(data != null, "Level data can't be empty!")
 
 
 func _on_car_level_ended() -> void:

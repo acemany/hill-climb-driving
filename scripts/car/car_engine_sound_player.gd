@@ -3,11 +3,13 @@ extends AudioStreamPlayer
 
 @export var car: Car
 
+
 func _ready() -> void:
-	assert(car != null)
+	assert(car != null, "`car` value on CarEngineSoundPlayer cant be null")
 
 	car.fuel_depleted.connect(_on_car_fuel_depleted)
 	car.refueled.connect(_on_car_refueled)
+
 
 func _process(delta: float) -> void:
 	var gas: bool = car.touch_gas
