@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://csl6ng7jbhgj5"]
+[gd_scene load_steps=12 format=3 uid="uid://csl6ng7jbhgj5"]
 
 [ext_resource type="Script" path="res://scripts/ui/level_ui.gd" id="1_3muol"]
+[ext_resource type="Texture2D" uid="uid://bc04yw6r32h68" path="res://assets/pics/milestone.png" id="2_oj1v8"]
 [ext_resource type="Texture2D" uid="uid://d2gwthba8y1qt" path="res://assets/pics/fuel.png" id="2_wv2ak"]
 [ext_resource type="PackedScene" path="res://scenes/car/pedal.tscn" id="3_anrv5"]
 [ext_resource type="PackedScene" uid="uid://crdy2035b233y" path="res://scenes/car/fuel_bar.tscn" id="3_pna6q"]
@@ -29,6 +30,7 @@ anchors_preset = -1
 anchor_left = 0.289583
 anchor_right = 0.710417
 anchor_bottom = 0.00925926
+offset_right = -8.00134
 grow_horizontal = 2
 
 [node name="Control" type="Control" parent="LevelMap"]
@@ -42,35 +44,35 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="LevelMap/Control"]
-custom_minimum_size = Vector2(200, 10)
+custom_minimum_size = Vector2(198, 10)
 layout_mode = 2
-anchor_right = 0.19802
+anchor_right = 0.198
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel2" type="Panel" parent="LevelMap/Control"]
-custom_minimum_size = Vector2(200, 10)
+custom_minimum_size = Vector2(198, 10)
 layout_mode = 2
 anchor_left = 0.2
-anchor_right = 0.39802
+anchor_right = 0.398
 anchor_bottom = 1.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel3" type="Panel" parent="LevelMap/Control"]
-custom_minimum_size = Vector2(200, 10)
+custom_minimum_size = Vector2(198, 10)
 layout_mode = 2
 anchor_left = 0.4
-anchor_right = 0.59802
+anchor_right = 0.598
 anchor_bottom = 1.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel4" type="Panel" parent="LevelMap/Control"]
-custom_minimum_size = Vector2(200, 10)
+custom_minimum_size = Vector2(198, 10)
 layout_mode = 2
 anchor_left = 0.6
-anchor_right = 0.79802
+anchor_right = 0.798
 anchor_bottom = 1.0
 metadata/_edit_use_anchors_ = true
 
@@ -78,9 +80,30 @@ metadata/_edit_use_anchors_ = true
 custom_minimum_size = Vector2(200, 10)
 layout_mode = 2
 anchor_left = 0.8
-anchor_right = 0.99802
+anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -6.10352e-05
 metadata/_edit_use_anchors_ = true
+
+[node name="NextMilestone" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1400.0
+offset_top = 40.0
+offset_right = 1440.0
+offset_bottom = 80.0
+
+[node name="Milestone" type="Sprite2D" parent="NextMilestone"]
+texture = ExtResource("2_oj1v8")
+
+[node name="Arrow" type="Label" parent="NextMilestone"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -90.0
+offset_right = -1.0
+offset_bottom = -56.0
+theme_override_font_sizes/font_size = 36
+text = "▴"
 
 [node name="LabelDistance" type="Label" parent="."]
 layout_mode = 1

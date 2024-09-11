@@ -2,6 +2,7 @@ class_name LevelUI
 extends Control
 
 const PAUSE_MODAL_SCENE: PackedScene = preload("res://scenes/ui/pause_modal.tscn")
+const MILESTONE_NOT_READY_POS: Vector2 = Vector2(1400, 40)
 
 @export var level: Level
 @export var player: Car
@@ -20,6 +21,8 @@ var highscore: float
 @onready var gauge_speed: Gauge = $GaugeSpeed
 @onready var low_fuel_alarm: LowFuelAlarm = $LowFuelAlarm
 @onready var level_map: Control = $LevelMap/Control
+@onready var next_milestone: Control = $NextMilestone
+@onready var milestone_lable: Label = $NextMilestone/Arrow
 
 
 func _ready() -> void:
@@ -39,7 +42,18 @@ func _process(_delta: float) -> void:
 	var meters: float = player.highest_x / Level.PX_TO_M
 	meters = maxf(0, meters)
 	label_distance.text = "%s m" % F.F(meters)
-	level_map.position.x = -fposmod(meters-120, 202) 
+	level_map.position.x = -fposmod(meters*2-120, 200)
+
+	var next_mile: float = get_milestone(meters)
+	if next_mile - 300 > player.position.x:
+		next_milestone.position = MILESTONE_NOT_READY_POS
+		milestone_lable.text = "\n%sm" % next_mile
+		milestone_lable.add_theme_font_size_override("font_size", 48)
+	else:
+		next_milestone.position.x = 556 - 75 + (next_mile - meters) * 2
+		next_milestone.position.y = 105
+		milestone_lable.text = "▴"
+		milestone_lable.add_theme_font_size_override("font_size", 36)
 
 
 	var highscore_displayed: float = maxf(meters, highscore)
@@ -69,6 +83,9 @@ func get_distance_to_next_fuel_in_meters() -> float:
 func get_highscore() -> float:
 	return Game.save.highscores.get_highscore(level.data)
 
+
+func get_milestone(meters: float) -> float:
+	return max(100 + ceil(meters/200 + 0.5)*200, 500)
 
 func pause_game() -> void:
 	var modal: PauseModal = PAUSE_MODAL_SCENE.instantiate() as PauseModal
