@@ -37,7 +37,7 @@ jobs:
         run: zip -r game_linux.zip export/linux
 
       - name: Upload Linux artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: game_linux
           path: game_linux.zip
@@ -82,7 +82,7 @@ jobs:
         run: zip -r game_android.zip export/android
 
       - name: Upload Android artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: game_android
           path: game_android.zip
@@ -113,7 +113,7 @@ jobs:
         run: zip -r game_windows.zip export/windows
 
       - name: Upload windows artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: game_windows
           path: game_windows.zip
