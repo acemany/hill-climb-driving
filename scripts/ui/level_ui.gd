@@ -12,6 +12,7 @@ const MILESTONE_NOT_READY_POS: Vector2 = Vector2(1400, 40)
 @export var never_show_next_fuel: bool = false
 
 var highscore: float
+var last_milestone: float
 
 @onready var label_distance: Label = $LabelDistance
 @onready var label_highscore: Label = $HBoxContainerHighscore/LabelHighscore
@@ -44,13 +45,19 @@ func _process(_delta: float) -> void:
 	label_distance.text = "%s m" % F.F(meters)
 	level_map.position.x = -fposmod(meters*2-120, 200)
 
-	var next_mile: float = get_milestone(meters)
-	if next_mile - 300 > player.position.x:
+	var next_mile: float
+	if meters < last_milestone:
+		next_mile = last_milestone
+	else:
+		next_mile = get_milestone(meters)
+		player.last_milestone = last_milestone
+
+	if next_mile - 440 > meters:
 		next_milestone.position = MILESTONE_NOT_READY_POS
 		milestone_lable.text = "\n%sm" % next_mile
 		milestone_lable.add_theme_font_size_override("font_size", 48)
 	else:
-		next_milestone.position.x = 556 - 75 + (next_mile - meters) * 2
+		next_milestone.position.x = 556 - 80 + (next_mile - meters) * 2
 		next_milestone.position.y = 105
 		milestone_lable.text = "▴"
 		milestone_lable.add_theme_font_size_override("font_size", 36)
@@ -85,7 +92,7 @@ func get_highscore() -> float:
 
 
 func get_milestone(meters: float) -> float:
-	return max(100 + ceil(meters/200 + 0.5)*200, 500)
+	return max(ceil(meters/200 + 0.5)*200, 500)
 
 func pause_game() -> void:
 	var modal: PauseModal = PAUSE_MODAL_SCENE.instantiate() as PauseModal

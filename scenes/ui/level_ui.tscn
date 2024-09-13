@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://csl6ng7jbhgj5"]
 
 [ext_resource type="Script" path="res://scripts/ui/level_ui.gd" id="1_3muol"]
-[ext_resource type="Texture2D" uid="uid://bc04yw6r32h68" path="res://assets/pics/milestone.png" id="2_oj1v8"]
+[ext_resource type="Texture2D" uid="uid://cloy4n4dajv5d" path="res://assets/pics/milestone.png" id="2_oj1v8"]
 [ext_resource type="Texture2D" uid="uid://d2gwthba8y1qt" path="res://assets/pics/fuel.png" id="2_wv2ak"]
 [ext_resource type="PackedScene" path="res://scenes/car/pedal.tscn" id="3_anrv5"]
 [ext_resource type="PackedScene" uid="uid://crdy2035b233y" path="res://scenes/car/fuel_bar.tscn" id="3_pna6q"]

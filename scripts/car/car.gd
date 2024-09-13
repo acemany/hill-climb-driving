@@ -20,7 +20,8 @@ var fuel: float = 1.0
 var on_low_fuel: bool = false
 var out_of_fuel: bool = false
 
-var highest_x: float = 0.0
+var highest_x: float = 0
+var last_milestone: float = 0
 
 var stats: CarStats = CarStats.new()
 

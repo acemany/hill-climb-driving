@@ -14,4 +14,5 @@ func _ready() -> void:
 func _on_car_level_ended() -> void:
 	var player_meters: float = car.highest_x / Level.PX_TO_M
 	Game.save.highscores.try_submit(data, player_meters)
+	Game.save.milestones.try_submit(data, car.last_milestone)
 	Game.save_game()

@@ -1,7 +1,7 @@
 class_name SaveGameHighscores
 extends Resource
 
-@export var highscores: Array[float] = [0, 0, 0, 0, 0, 0]
+var highscores: Array[float] = [0, 0, 0, 0, 0, 0]
 
 
 func try_submit(data: LevelData, meters: float) -> void:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://ben5q22hvld7x"]
 
 [ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_6aqcu"]
-[ext_resource type="PackedScene" path="res://scenes/ui/level_button.tscn" id="2_2p7lx"]
+[ext_resource type="PackedScene" uid="uid://hnuqul3cgfya" path="res://scenes/ui/level_button.tscn" id="2_2p7lx"]
 [ext_resource type="Texture2D" uid="uid://hji0vun1n4ci" path="res://scenes/global/art/gradient_bg.tres" id="2_poe60"]
 [ext_resource type="Resource" uid="uid://dx1mcojubiamm" path="res://resources/levels/countryside/countryside.tres" id="4_i7pdg"]
 [ext_resource type="Resource" uid="uid://2fbe2k4ge0wd" path="res://resources/levels/desert/desert.tres" id="5_qolbk"]

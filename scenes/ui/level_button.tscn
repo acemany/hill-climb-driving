@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://hnuqul3cgfya"]
 
 [ext_resource type="Script" path="res://scripts/ui/level_button.gd" id="1_fkorm"]
-[ext_resource type="Texture2D" path="res://assets/pics/trophy.png" id="2_lelew"]
+[ext_resource type="Texture2D" uid="uid://b3ei23yviul05" path="res://assets/pics/trophy.png" id="2_lelew"]
+[ext_resource type="Texture2D" uid="uid://cloy4n4dajv5d" path="res://assets/pics/milestone.png" id="3_ealr3"]
 
 [node name="LevelButton" type="TextureButton"]
 custom_minimum_size = Vector2(1136, 640)
@@ -51,6 +52,29 @@ texture = ExtResource("2_lelew")
 expand_mode = 2
 
 [node name="LabelHighscore" type="Label" parent="HBoxContainerHighscore"]
+layout_mode = 2
+text = "0m"
+
+[node name="HBoxContainerMilestone" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 87.0
+offset_right = -16.0
+offset_bottom = 145.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 16
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainerMilestone"]
+layout_mode = 2
+texture = ExtResource("3_ealr3")
+expand_mode = 2
+
+[node name="LabelMilestone" type="Label" parent="HBoxContainerMilestone"]
 layout_mode = 2
 text = "0m"
 

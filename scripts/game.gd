@@ -29,6 +29,13 @@ static func save_blank(file: FileAccess) -> void:
 	file.store_double(0)# Cliff
 	file.store_double(0)# Nirvana
 
+	file.store_double(0)# Countryside last_milestone
+	file.store_double(0)# Desert
+	file.store_double(0)# Highway
+	file.store_double(0)# Mountain
+	file.store_double(0)# Cliff
+	file.store_double(0)# Nirvana
+
 	file.store_32(0)# expirience
 
 
@@ -70,6 +77,13 @@ static func save_game() -> void:
 		file.store_double(Game.save.highscores.highscores[3])# Mountain
 		file.store_double(Game.save.highscores.highscores[4])# Cliff
 		file.store_double(Game.save.highscores.highscores[5])# Nirvana
+
+		file.store_double(Game.save.milestones.milestones[0])# Countryside
+		file.store_double(Game.save.milestones.milestones[1])# Desert
+		file.store_double(Game.save.milestones.milestones[2])# Highway
+		file.store_double(Game.save.milestones.milestones[3])# Mountain
+		file.store_double(Game.save.milestones.milestones[4])# Cliff
+		file.store_double(Game.save.milestones.milestones[5])# Nirvana
 
 		file.store_32(Game.save.experience.xp)# expirience
 
@@ -135,6 +149,9 @@ static func try_load_game() -> void:
 		Game.save.shop.add_item_offer(temp)
 
 	Game.save.highscores.highscores = [file.get_double(),file.get_double(),file.get_double(),
+										file.get_double(),file.get_double(),file.get_double()]
+
+	Game.save.milestones.milestones = [file.get_double(),file.get_double(),file.get_double(),
 										file.get_double(),file.get_double(),file.get_double()]
 
 	Game.save.experience.xp = file.get_32()
